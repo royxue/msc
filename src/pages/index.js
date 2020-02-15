@@ -11,6 +11,8 @@ import { Helmet } from "react-helmet"
 import ButtonPage from '../components/button_page';
 import CompanyPage from '../components/company_page';
 import Image from '../components/image';
+import StrategyPage from '../components/strategy_page';
+import StudyPage from '../components/study_page';
 
 import MSCFooter from '../components/footer';
 
