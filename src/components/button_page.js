@@ -22,8 +22,8 @@ class ButtonPage extends React.Component {
             </ButtonArea>
           </div>
           <ButtonArticle onBtnClick={e=>this.setState({page:0})} display={this.state.page == 1 ? null : 'none'} />
-          <ButtonArticle display={this.state.page == 2 ? null : 'none'} />
-          <ButtonArticle display={this.state.page == 3 ? null : 'none'} />
+          <ButtonArticle onBtnClick={e=>this.setState({page:1})} display={this.state.page == 2 ? null : 'none'} />
+          <ButtonArticle onBtnClick={e=>this.setState({page:2})} display={this.state.page == 3 ? null : 'none'} />
         </div>
     )
   }
