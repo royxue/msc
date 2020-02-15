@@ -16,8 +16,10 @@ import StudyPage from '../components/study_page';
 
 import MSCFooter from '../components/footer';
 
+
 import 'weui';
 import 'react-weui/build/packages/react-weui.css';
+import './index.css'
 
 class IndexPage extends React.Component {
   state={
