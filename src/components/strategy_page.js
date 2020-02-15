@@ -21,6 +21,7 @@ import {
   CellBody,
   CellFooter
 } from "react-weui";
+import { nominalTypeHack } from "prop-types";
 
 
 const CellMore = () => (
@@ -36,6 +37,10 @@ class StrategyPage extends React.Component {
   }
 
   render() {
+    const contentboxStyle = {
+      "-webkit-line-clamp": 'none'
+    }
+
     return(
       <Tab style={{display: this.props.display}}>
       <Panel>
@@ -50,7 +55,7 @@ class StrategyPage extends React.Component {
                     <MediaBox type="text">
                         <MediaBoxTitle>战略二</MediaBoxTitle>
                         <MediaBoxDescription>
-                          <div style={{"-webkit-line-clamp":'none'}}>
+                          <div style={ contentboxStyle }>
                           Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                            </div>
                         </MediaBoxDescription>

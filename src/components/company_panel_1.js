@@ -10,7 +10,7 @@ import {
 } from 'react-weui';
 
 
-class CompanyPanel extends React.Component {
+class CompanyPanel_1 extends React.Component {
   render () {
     return (
       <Panel style={{display: this.props.display}}>
@@ -33,10 +33,19 @@ class CompanyPanel extends React.Component {
               </MediaBoxDescription>
             </MediaBoxBody>
           </MediaBox>
+          <MediaBox type="appmsg" href="javascript:void(0);">
+            <MediaBoxHeader><img src="http://user-assets.sxlcdn.com/images/310787/FjTqw_o_ay25gK2rOkTGmYSnhP_6.png?imageMogr2/strip/auto-orient/thumbnail/720x1440%3E/quality/90!/format/png"/></MediaBoxHeader>
+            <MediaBoxBody>
+              <MediaBoxTitle>民生数据服务| 人和数据</MediaBoxTitle>
+              <MediaBoxDescription>
+                通过大数据助力乡村美好生活
+              </MediaBoxDescription>
+            </MediaBoxBody>
+          </MediaBox>
         </PanelBody>
       </Panel>
     )
   }
 }
 
-export default CompanyPanel;
+export default CompanyPanel_1;
