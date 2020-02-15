@@ -43,10 +43,10 @@ class IndexPage extends React.Component {
             </NavBar>
             <TabBody>
               <ButtonPage display={this.state.tab == 0 ? null : 'none'} />
-              <p style={{display: this.state.tab == 1 ? null : 'none'}}>2</p>
+             <StrategyPage display={this.state.tab ==1 ? null: 'none'} />
               <CompanyPage display={this.state.tab == 2 ? null : 'none'} />
-              <p style={{display: this.state.tab == 3 ? null : 'none'}}>4</p>
-            </TabBody>
+              <StudyPage display={this.state.tab == 3?null:'none'}/>
+              </TabBody>
           </Tab>
         </Page>
       </div>
