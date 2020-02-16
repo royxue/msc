@@ -72,17 +72,17 @@ const DATA = {
 
 class CompanyPanel extends React.Component {
   render () {
-    var mediaboxList = _.map(DATA['company1'], (company1) =>
+    var mediaboxList = _.map(DATA[this.props._class], (company) =>
       {
-        return <MediaBox type="appmsg" href={company1.link}>
-          <MediaBoxHeader><img src={company1.img_src}/>
+        return <MediaBox type="appmsg" href={company.link}>
+          <MediaBoxHeader><img src={company.img_src}/>
             </MediaBoxHeader>
           <MediaBoxBody>
             <MediaBoxTitle>
-              {company1.title}
+              {company.title}
             </MediaBoxTitle>
             <MediaBoxDescription>
-              {company1.content}
+              {company.content}
             </MediaBoxDescription>
           </MediaBoxBody>
           </MediaBox>

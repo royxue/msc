@@ -23,10 +23,10 @@ class CompanyPage extends React.Component {
         <NavBarItem active={this.state.tab == 3} onClick={e=>this.setState({tab:3})}>分类4</NavBarItem>
       </NavBar>
       <TabBody>
-        <CompanyPanel display={this.state.tab == 0 ? null : 'none'}/>
-        <CompanyPanel display={this.state.tab == 1 ? null : 'none'}/>
-        <CompanyPanel display={this.state.tab == 2 ? null : 'none'}/>
-        <CompanyPanel display={this.state.tab == 3 ? null : 'none'}/>
+        <CompanyPanel display={this.state.tab == 0 ? null : 'none'} _class = "company1"/>
+        <CompanyPanel display={this.state.tab == 1 ? null : 'none'} _class = "company2"/>
+        <CompanyPanel display={this.state.tab == 2 ? null : 'none'} _class = "company3"/>
+        <CompanyPanel display={this.state.tab == 3 ? null : 'none'} _class = "company4"/>
       </TabBody>
     </Tab>
     )
