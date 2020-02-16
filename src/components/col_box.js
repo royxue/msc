@@ -22,7 +22,8 @@ class ColBox extends React.Component {
 
   render() {
     var boxClass = classNames({
-      'box-show': this.state.show
+      'box-show': this.state.show,
+      'box-hide': !this.state.show
     })
     return (
       <MediaBox type="text">

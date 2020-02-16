@@ -29,7 +29,8 @@ class ButtonArticle extends React.Component {
             </section>
           </section>
         </Article>
-        <Button onClick={this.props.onBtnClick}> Go back</Button>
+        <Button type="default" onClick={this.props.onBtnClick}> Go back</Button>
+        <div className="btn-placeholder" />
       </div>
       )
     }

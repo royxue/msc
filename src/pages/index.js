@@ -13,6 +13,7 @@ import CompanyPage from '../components/company_page';
 import Image from '../components/image';
 import StrategyPage from '../components/strategy_page';
 import StudyPage from '../components/study_page';
+import FooterBlock from '../components/footer_block';
 
 import MSCFooter from '../components/footer';
 
@@ -50,6 +51,7 @@ class IndexPage extends React.Component {
               <StudyPage display={this.state.tab == 3?null:'none'}/>
               </TabBody>
           </Tab>
+          <FooterBlock />
         </Page>
       </div>
     )
