@@ -7,6 +7,8 @@ import {
 } from "react-weui";
 
 import CompanyPanel from './company_panel';
+import './company_page.css'
+import classNames from "classnames";
 
 class CompanyPage extends React.Component {
   state = {
@@ -17,10 +19,42 @@ class CompanyPage extends React.Component {
     return(
       <Tab style={{display: this.props.display}}>
       <NavBar>
-        <NavBarItem active={this.state.tab == 0} onClick={e=>this.setState({tab:0})}>分类1</NavBarItem>
-        <NavBarItem active={this.state.tab == 1} onClick={e=>this.setState({tab:1})}>分类2</NavBarItem>
-        <NavBarItem active={this.state.tab == 2} onClick={e=>this.setState({tab:2})}>分类3</NavBarItem>
-        <NavBarItem active={this.state.tab == 3} onClick={e=>this.setState({tab:3})}>分类4</NavBarItem>
+        <NavBarItem 
+        active={this.state.tab == 0} 
+        onClick={e=>this.setState({tab:0})}
+        className={
+          classNames({
+            'small_navbar_active': this.state.tab == 0,
+            'small_navbar': this.state.tab != 0
+          })}
+        >分类1</NavBarItem>
+        <NavBarItem 
+        active={this.state.tab == 1} 
+        onClick={e=>this.setState({tab:1})}
+        className={
+          classNames({
+            'small_navbar_active': this.state.tab == 1,
+            'small_navbar': this.state.tab != 1
+          })}
+        >分类2</NavBarItem>
+        <NavBarItem  
+        active={this.state.tab == 2} 
+        onClick={e=>this.setState({tab:2})}
+        className={
+          classNames({
+            'small_navbar_active': this.state.tab == 2,
+            'small_navbar': this.state.tab != 2
+          })}
+        >分类3</NavBarItem>
+        <NavBarItem 
+        class="small_navbar"  
+        active={this.state.tab == 3} 
+        onClick={e=>this.setState({tab:3})}
+        className={
+          classNames({
+            'small_navbar_active': this.state.tab == 3,
+            'small_navbar': this.state.tab != 3
+          })}>分类4</NavBarItem>
       </NavBar>
       <TabBody>
         <CompanyPanel display={this.state.tab == 0 ? null : 'none'} _class = "company1"/>
