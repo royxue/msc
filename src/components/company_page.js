@@ -6,10 +6,7 @@ import {
   TabBody
 } from "react-weui";
 
-import CompanyPanel_1 from './company_panel_1';
-import CompanyPanel_2 from './company_panel_2';
-import CompanyPanel_3 from './company_panel_3';
-import CompanyPanel_4 from './company_panel_4';
+import CompanyPanel from './company_panel';
 
 class CompanyPage extends React.Component {
   state = {
@@ -26,10 +23,10 @@ class CompanyPage extends React.Component {
         <NavBarItem active={this.state.tab == 3} onClick={e=>this.setState({tab:3})}>分类4</NavBarItem>
       </NavBar>
       <TabBody>
-        <CompanyPanel_1 display={this.state.tab == 0 ? null : 'none'}/>
-        <CompanyPanel_2 display={this.state.tab == 1 ? null : 'none'}/>
-        <CompanyPanel_3 display={this.state.tab == 2 ? null : 'none'}/>
-        <CompanyPanel_4 display={this.state.tab == 3 ? null : 'none'}/>
+        <CompanyPanel display={this.state.tab == 0 ? null : 'none'}/>
+        <CompanyPanel display={this.state.tab == 1 ? null : 'none'}/>
+        <CompanyPanel display={this.state.tab == 2 ? null : 'none'}/>
+        <CompanyPanel display={this.state.tab == 3 ? null : 'none'}/>
       </TabBody>
     </Tab>
     )
