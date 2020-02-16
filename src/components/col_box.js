@@ -35,7 +35,9 @@ class ColBox extends React.Component {
         <MediaBoxDescription className={boxClass}>
           {this.props.content}
         </MediaBoxDescription>
-        <p onClick={this.showBox} className='box-more'>查看更多</p>
+        <p onClick={this.showBox} className='box-more'>
+          {this.state.show? '收起' : '查看更多'}
+        </p>
       </MediaBox>
     )
   }

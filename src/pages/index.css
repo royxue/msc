@@ -1,3 +1,7 @@
+body {
+  color: #333;
+}
+
 .weui-loadmore {
   display: none;
 }
@@ -8,12 +12,32 @@
   border-right: 1rem solid #333;
 }
 
+.weui-panel {
+  margin-top: 0;
+}
+
 .tab-slected {
   font-weight: bold;
 }
 
+.tab-slected::before,
+.tab-slected::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+
+.tab-slected::before {
+  border-width: 0.5em;
+  border-bottom-color: #333;
+  border-right-color: #333;
+}
+
 .btn-placeholder {
-  height: 4rem;
+  height: 4.5rem;
 }
 
 .box-show {
@@ -34,6 +58,7 @@
 }
 
 .box-more {
+  margin-top: 0.5rem;
   width: 100%;
   text-align: center;
 }
