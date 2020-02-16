@@ -1,3 +1,36 @@
+.weui-loadmore {
+  display: none;
+}
+
+.btn-placeholder {
+  height: 4rem;
+}
+
 .box-show {
   -webkit-line-clamp: 999;
+}
+
+.box-hide {
+  display: none;
+}
+
+.footer-block {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: #E0E0E0;
+}
+
+.footer-block div {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-btn {
+  padding: 0.5rem 2rem;
+  background-color: #BA68C8;
 }
