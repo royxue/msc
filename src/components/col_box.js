@@ -28,14 +28,14 @@ class ColBox extends React.Component {
     return (
       <MediaBox type="text">
         <MediaBoxTitle>
-          <div style={{width: "100%", textAlign: "center"}}>
+          <div className='box-title'>
             {this.props.title}
           </div>
         </MediaBoxTitle>
         <MediaBoxDescription className={boxClass}>
           {this.props.content}
         </MediaBoxDescription>
-        <p onClick={this.showBox} style={{width: "100", textAlign: "center"}}>查看更多</p>
+        <p onClick={this.showBox} className='box-more'>查看更多</p>
       </MediaBox>
     )
   }

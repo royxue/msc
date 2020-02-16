@@ -16,9 +16,15 @@ class ButtonPage extends React.Component {
         <div style={{display: this.props.display}}>
           <div style={{display: this.state.page == 0 ? null : 'none'}}>
             <ButtonArea >
-              <Button type="default" onClick={e=>this.setState({page:1})}>01. Who Am I</Button>
-              <Button type="default" onClick={e=>this.setState({page:2})}>02. Where Am I</Button>
-              <Button type="default" onClick={e=>this.setState({page:3})}>03. Wtf Am I</Button>
+              <Button type="default" onClick={e=>this.setState({page:1})}>
+                01. Who Am I
+              </Button>
+              <Button type="default" onClick={e=>this.setState({page:2})}>
+                02. Where Am I
+              </Button>
+              <Button type="default" onClick={e=>this.setState({page:3})}>
+                03. Wtf Am I
+              </Button>
             </ButtonArea>
           </div>
           <ButtonArticle onBtnClick={e=>this.setState({page:0})} display={this.state.page == 1 ? null : 'none'} />

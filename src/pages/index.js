@@ -7,6 +7,7 @@ import {
   NavBarItem
 } from "react-weui"
 import { Helmet } from "react-helmet"
+import classNames from "classnames";
 
 import ButtonPage from '../components/button_page';
 import CompanyPage from '../components/company_page';
@@ -28,7 +29,6 @@ class IndexPage extends React.Component {
   };
 
   render() {
-
     return (
       <div>
         <Helmet>
@@ -39,10 +39,38 @@ class IndexPage extends React.Component {
           <Image />
           <Tab>
             <NavBar>
-              <NavBarItem active={this.state.tab == 0} onClick={e=>this.setState({tab:0})}>行动背景</NavBarItem>
-              <NavBarItem active={this.state.tab == 1} onClick={e=>this.setState({tab:1})}>战略十问</NavBarItem>
-              <NavBarItem active={this.state.tab == 2} onClick={e=>this.setState({tab:2})}>企业特辑</NavBarItem>
-              <NavBarItem active={this.state.tab == 3} onClick={e=>this.setState({tab:3})}>我想学习</NavBarItem>
+              <NavBarItem
+                active={this.state.tab == 0}
+                onClick={e=>this.setState({tab:0})}
+                className={
+                  classNames({
+                    'tab-slected': this.state.tab == 0
+                  })}
+              >行动背景</NavBarItem>
+              <NavBarItem
+                active={this.state.tab == 1}
+                onClick={e=>this.setState({tab:1})}
+                className={
+                  classNames({
+                    'tab-slected': this.state.tab == 1
+                  })}
+              >战略十问</NavBarItem>
+              <NavBarItem
+                active={this.state.tab == 2}
+                onClick={e=>this.setState({tab:2})}
+                className={
+                  classNames({
+                    'tab-slected': this.state.tab == 2
+                  })}
+              >企业特辑</NavBarItem>
+              <NavBarItem
+                active={this.state.tab == 3}
+                onClick={e=>this.setState({tab:3})}
+                className={
+                  classNames({
+                    'tab-slected': this.state.tab == 3
+                  })}
+              >我想学习</NavBarItem>
             </NavBar>
             <TabBody>
               <ButtonPage display={this.state.tab == 0 ? null : 'none'} />

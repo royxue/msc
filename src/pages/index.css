@@ -2,16 +2,40 @@
   display: none;
 }
 
+.weui-btn, .weui-btn:after {
+  border-radius: 0;
+  border-left: 1rem solid #333;
+  border-right: 1rem solid #333;
+}
+
+.tab-slected {
+  font-weight: bold;
+}
+
 .btn-placeholder {
   height: 4rem;
 }
 
 .box-show {
   -webkit-line-clamp: 999;
+  color: #333333;
+  font-size: 0.85rem;
 }
 
 .box-hide {
   display: none;
+}
+
+.box-title {
+  width: 100%;
+  text-align: left;
+  text-overflow: none;
+  white-space: normal;
+}
+
+.box-more {
+  width: 100%;
+  text-align: center;
 }
 
 .footer-block {
@@ -32,5 +56,6 @@
 
 .footer-btn {
   padding: 0.5rem 2rem;
-  background-color: #BA68C8;
+  background-color: #333333;
+  color: #ffffff;
 }
