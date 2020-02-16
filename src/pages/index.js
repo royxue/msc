@@ -24,10 +24,19 @@ import 'react-weui/build/packages/react-weui.css';
 import './index.css'
 
 class IndexPage extends React.Component {
-  state={
-    tab:0
-  };
-
+  constructor(props){
+    super(props);
+    this.state={
+      tab:0,
+      mask: false,
+    }
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick(){
+    this.setState({
+      mask: !this.state.mask
+    })
+  }
   render() {
     return (
       <div>
@@ -36,6 +45,20 @@ class IndexPage extends React.Component {
           <title>MSC World</title>
         </Helmet>
         <Page>
+        <div onClick={this.handleClick}
+      className={
+        classNames({
+          'mask':this.state.mask,
+          '_mask':!this.state.mask
+        })}>
+        </div>
+        <div class={classNames({
+            'mask_image_hidden':!this.state.mask,
+            'mask_image_visible':this.state.mask
+          })}>
+          <img 
+              src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
+              style={{height:'40%'}}/></div>
           <Image />
           <Tab>
             <NavBar>
@@ -79,7 +102,7 @@ class IndexPage extends React.Component {
               <StudyPage display={this.state.tab == 3?null:'none'}/>
               </TabBody>
           </Tab>
-          <FooterBlock />
+          <FooterBlock change={this.handleClick} popup={this.state.mask}/>
         </Page>
       </div>
     )
