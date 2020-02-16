@@ -6,39 +6,39 @@ import {
   MediaBoxTitle,
   MediaBoxDescription,
 } from "react-weui";
-import { nominalTypeHack } from "prop-types";
+import _ from "lodash";
 
 import ColBox from "../components/col_box";
 
-class StrategyPage extends React.Component {
+const DATA = {
+  strategy: [
+    {
+      title: "我是谁",
+      content: "我也不知道"
+    },
+    {
+      title: "那你呢",
+      content: "我不好说 <b>试试看</b>"
+    }
+  ]
+}
 
+class StrategyPage extends React.Component {
   render() {
     const contentboxStyle = {
       "-webkit-line-clamp": 'none'
     }
 
+    var boxList = _.map(DATA['strategy'], (strategy) =>
+      {
+        return <ColBox title={strategy.title} content={strategy.content} />
+      }
+    )
+
     return(
       <Panel style={{display: this.props.display}}>
         <PanelBody>
-          <ColBox />
-          <MediaBox type="text">
-            <MediaBoxTitle>战略二</MediaBoxTitle>
-            <MediaBoxDescription>
-              第三问
-            </MediaBoxDescription>
-          </MediaBox>
-          <MediaBox type="text">
-            <MediaBoxTitle>战略三</MediaBoxTitle>
-            <MediaBoxDescription>
-              第三问
-            </MediaBoxDescription>
-          </MediaBox>
-          <MediaBox type="text">
-            <MediaBoxTitle>战略四</MediaBoxTitle>
-            <MediaBoxDescription>
-              第四问
-            </MediaBoxDescription>
-          </MediaBox>
+          {boxList}
         </PanelBody>
       </Panel>
     )
