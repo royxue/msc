@@ -17,7 +17,7 @@ const DATA = {
       img_src: "https://lh3.googleusercontent.com/eOXYfM4C_CJc6hJ9Yxa0q0Xf-O8u03T5af6NdC5vnuYKLnrgsIjEaM4lUK3Mj7gNn7Y",
       title:"腾讯－微信",
       content:"微信迅速在「看一看」上线了疫情实时动态播报，还设置了「疫区日记」、「权威声音」等版块，发布一线医务人员、重点疫区病患的跟踪报道，为民众提供更加多元的信息资讯。",
-      link:"javascript:void(0);"
+      link:"https://mp.weixin.qq.com/s/aSBDFvP8FB3TlY0UfXuV-g"
     },
     {
       img_src: "http://user-assets.sxlcdn.com/images/310787/Fv-v6jZ6jWMXBUmKvzpJFUDtXFs6.png?imageMogr2/strip/auto-orient/thumbnail/720x1440%3E/quality/90!/format/png",
