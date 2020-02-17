@@ -14,9 +14,9 @@ import _ from "lodash";
 const DATA = {
   company1: [
     {
-      img_src: "http://user-assets.sxlcdn.com/images/310787/FoWH8HbFOdBzFYRDgqDHINjrqUG6.png?imageMogr2/strip/auto-orient/thumbnail/720x1440%3E/quality/90!/format/png",
-      title:"大凉山精准扶贫| 木都哈尼",
-      content:"用中国第一瓶有民族特色的特级初榨橄榄油落实精准扶贫",
+      img_src: "https://lh3.googleusercontent.com/eOXYfM4C_CJc6hJ9Yxa0q0Xf-O8u03T5af6NdC5vnuYKLnrgsIjEaM4lUK3Mj7gNn7Y",
+      title:"腾讯－微信",
+      content:"微信迅速在「看一看」上线了疫情实时动态播报，还设置了「疫区日记」、「权威声音」等版块，发布一线医务人员、重点疫区病患的跟踪报道，为民众提供更加多元的信息资讯。",
       link:"javascript:void(0);"
     },
     {
@@ -28,8 +28,8 @@ const DATA = {
   ],
   company2:[
     {
-      img_src:"http://user-assets.sxlcdn.com/images/310787/Fi2WKT-e3eoGqOuXTAhS-AEAYpIX.png?imageMogr2/strip/auto-orient/thumbnail/720x1440%3E/quality/90!/format/png",
-      title:"旅客等候方案| 知乎",
+      img_src:"https://www.xyzapk.com/wp-content/uploads/2017/11/com.zhihu_.android.jpg.png",
+      title:"知乎",
       content:"在无聊的等候中，与世界分享你的知识、见解与经验",
       link:"javascript:void(0);"
     },

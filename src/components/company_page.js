@@ -37,6 +37,7 @@ class CompanyPage extends React.Component {
             'small_navbar': this.state.tab != 1
           })}
         >分类2</NavBarItem>
+        {/*
         <NavBarItem  
         active={this.state.tab == 2} 
         onClick={e=>this.setState({tab:2})}
@@ -55,6 +56,7 @@ class CompanyPage extends React.Component {
             'small_navbar_active': this.state.tab == 3,
             'small_navbar': this.state.tab != 3
           })}>分类4</NavBarItem>
+        */}
       </NavBar>
       <TabBody>
         <CompanyPanel display={this.state.tab == 0 ? null : 'none'} _class = "company1"/>

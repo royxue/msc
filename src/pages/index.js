@@ -52,11 +52,12 @@ class IndexPage extends React.Component {
           '_mask':!this.state.mask
         })}>
         </div>
-        <div class={classNames({
+        <div onClick={this.handleClick}
+        class={classNames({
             'mask_image_hidden':!this.state.mask,
             'mask_image_visible':this.state.mask
           })}>
-          <img onClick={this.handleClick}
+          <img 
               src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
               style={{height:'40%'}}/></div>
           <Image />
@@ -93,7 +94,7 @@ class IndexPage extends React.Component {
                   classNames({
                     'tab-slected': this.state.tab == 3
                   })}
-              >我想学习</NavBarItem>
+              >我想共创</NavBarItem>
             </NavBar>
             <TabBody>
               <ButtonPage display={this.state.tab == 0 ? null : 'none'} />

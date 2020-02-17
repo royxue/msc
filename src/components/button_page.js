@@ -17,14 +17,15 @@ class ButtonPage extends React.Component {
           <div style={{display: this.state.page == 0 ? null : 'none'}}>
             <ButtonArea >
               <Button type="default" onClick={e=>this.setState({page:1})}>
-                01. Who Am I
+                <p>1. 我们为什么要做出这份指南？</p>
               </Button>
-              <Button type="default" onClick={e=>this.setState({page:2})}>
+              
+              {/*<Button type="default" onClick={e=>this.setState({page:2})}>
                 02. Where Am I
               </Button>
               <Button type="default" onClick={e=>this.setState({page:3})}>
                 03. Wtf Am I
-              </Button>
+              </Button>*/}
             </ButtonArea>
           </div>
           <ButtonArticle onBtnClick={e=>this.setState({page:0})} display={this.state.page == 1 ? null : 'none'} />

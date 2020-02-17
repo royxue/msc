@@ -19,6 +19,12 @@ class ColBox extends React.Component {
       this.setState({ show: true })
     }
   }
+  parseToDOM(str){
+    var div = document.createElement("div")
+    if(typeof str ==="string")
+      div.innerHTML = str;
+    return div.innerHTML;
+  }
 
   render() {
     var boxClass = classNames({
@@ -33,7 +39,7 @@ class ColBox extends React.Component {
           </div>
         </MediaBoxTitle>
         <MediaBoxDescription className={boxClass}>
-          {this.props.content}
+          <p dangerouslySetInnerHTML={{__html:this.props.content}}></p>
         </MediaBoxDescription>
         <p onClick={this.showBox} className='box-more'>
           {this.state.show? '收起' : '查看更多'}

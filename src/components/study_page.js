@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useLayoutEffect } from "react"
 import {
     Panel,
     PanelBody,
@@ -9,15 +9,20 @@ import {
 import _ from "lodash";
 import ColBox from "../components/col_box";
 
+
+
+
+
+
 const DATA= {
   info:[
     {
-      title:"战略二",
-      description:"Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+      title:"如你愿意加入到该案例集与共创指南中，你将获得：",
+      description:"<ol><li>微网站企业案例收录</li><li>疫情结束后出版的《企业疫情参与白皮书》</li><li>企业疫情参与影像实录(视频形式)</li></ol>"
     },
     {
-      title:"",
-      description:""
+      title:"如何加入",
+      description:"请联系stephanie@msc-world，邮件标题请注明【企业名称 + 疫情应对共创加入】"
     }
   ]
 }
