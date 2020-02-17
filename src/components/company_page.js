@@ -29,19 +29,17 @@ class CompanyPage extends React.Component {
         onClick={e=>this.setState({tab:0})}
         className={
           classNames({
-            'small_navbar_active': this.state.tab == 0,
-            'small_navbar': this.state.tab != 0
+            'small_navbar_active': this.state.tab == 0
           })}
-        >分类1</NavBarItem>
+        ><p>分类1</p></NavBarItem>
         <NavBarItem
         active={this.state.tab == 1}
         onClick={e=>this.setState({tab:1})}
         className={
           classNames({
-            'small_navbar_active': this.state.tab == 1,
-            'small_navbar': this.state.tab != 1
+            'small_navbar_active': this.state.tab == 1
           })}
-        >分类2</NavBarItem>
+        ><p>分类2</p></NavBarItem>
         {/*
         <NavBarItem
         active={this.state.tab == 2}
