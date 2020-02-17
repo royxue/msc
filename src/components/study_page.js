@@ -10,10 +10,6 @@ import _ from "lodash";
 import ColBox from "../components/col_box";
 
 
-
-
-
-
 const DATA= {
   info:[
     {
@@ -31,7 +27,7 @@ class StudyPage extends React.Component {
     const contentboxStyle = {
       "-webkit-line-clamp": 'none'
     }
-    
+
     var boxList = _.map(DATA['info'], (info) => {
       return <ColBox title={info.title} content = {info.description} />
     })

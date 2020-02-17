@@ -8,8 +8,23 @@ body {
 
 .weui-btn, .weui-btn:after {
   border-radius: 0;
-  border-left: 1rem solid #333;
-  border-right: 1rem solid #333;
+  padding: 0;
+  position: inherit;
+}
+
+.weui-btn:after {
+  content: initial;
+}
+
+.btn-page {
+  color: #333333;
+  background-color: #e6f7ff;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.btn-icon {
+  color: #fff;
 }
 
 .weui-panel {
@@ -18,9 +33,29 @@ body {
 
 .tab-slected {
   font-weight: bold;
+  color: #1890ff;
+  background-color: #e6f7ff !important;
 }
 
-.tab-slected::before,
+.countup {
+  margin: 1rem 0;
+}
+
+.tab-slected p::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: .3rem;
+  top: initial;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  background: #1890ff;
+}
+
+/* .tab-slected::before,
 .tab-slected::after {
   content: '';
   position: absolute;
@@ -34,7 +69,7 @@ body {
   border-width: 0.5em;
   border-bottom-color: #333;
   border-right-color: #333;
-}
+} */
 
 .btn-placeholder {
   height: 4.5rem;
@@ -84,7 +119,6 @@ body {
   background-color: #333333;
   color: #ffffff;
 }
-
 
 .mask{
   position: fixed;

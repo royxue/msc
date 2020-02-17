@@ -9,6 +9,7 @@ import {
 import CompanyPanel from './company_panel';
 import './company_page.css'
 import classNames from "classnames";
+import CountUp from 'react-countup';
 
 class CompanyPage extends React.Component {
   state = {
@@ -17,10 +18,14 @@ class CompanyPage extends React.Component {
 
   render() {
     return(
-      <Tab style={{display: this.props.display}}>
+      <div style={{display: this.props.display}}>
+      <p className='countup'>
+        已收入 <CountUp start={this.props.display ? 92 : 93} end={101} duration={5} /> 个案例
+      </p>
+      <Tab >
       <NavBar>
-        <NavBarItem 
-        active={this.state.tab == 0} 
+        <NavBarItem
+        active={this.state.tab == 0}
         onClick={e=>this.setState({tab:0})}
         className={
           classNames({
@@ -28,8 +33,8 @@ class CompanyPage extends React.Component {
             'small_navbar': this.state.tab != 0
           })}
         >分类1</NavBarItem>
-        <NavBarItem 
-        active={this.state.tab == 1} 
+        <NavBarItem
+        active={this.state.tab == 1}
         onClick={e=>this.setState({tab:1})}
         className={
           classNames({
@@ -38,8 +43,8 @@ class CompanyPage extends React.Component {
           })}
         >分类2</NavBarItem>
         {/*
-        <NavBarItem  
-        active={this.state.tab == 2} 
+        <NavBarItem
+        active={this.state.tab == 2}
         onClick={e=>this.setState({tab:2})}
         className={
           classNames({
@@ -47,9 +52,9 @@ class CompanyPage extends React.Component {
             'small_navbar': this.state.tab != 2
           })}
         >分类3</NavBarItem>
-        <NavBarItem 
-        class="small_navbar"  
-        active={this.state.tab == 3} 
+        <NavBarItem
+        class="small_navbar"
+        active={this.state.tab == 3}
         onClick={e=>this.setState({tab:3})}
         className={
           classNames({
@@ -65,6 +70,7 @@ class CompanyPage extends React.Component {
         <CompanyPanel display={this.state.tab == 3 ? null : 'none'} _class = "company4"/>
       </TabBody>
     </Tab>
+    </div>
     )
   }
 }

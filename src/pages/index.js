@@ -57,7 +57,7 @@ class IndexPage extends React.Component {
             'mask_image_hidden':!this.state.mask,
             'mask_image_visible':this.state.mask
           })}>
-          <img 
+          <img
               src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
               style={{height:'40%'}}/></div>
           <Image />
@@ -70,7 +70,7 @@ class IndexPage extends React.Component {
                   classNames({
                     'tab-slected': this.state.tab == 0
                   })}
-              >行动背景</NavBarItem>
+              ><p>行动背景</p></NavBarItem>
               <NavBarItem
                 active={this.state.tab == 1}
                 onClick={e=>this.setState({tab:1})}
@@ -78,7 +78,7 @@ class IndexPage extends React.Component {
                   classNames({
                     'tab-slected': this.state.tab == 1
                   })}
-              >战略十问</NavBarItem>
+              ><p>战略十问</p></NavBarItem>
               <NavBarItem
                 active={this.state.tab == 2}
                 onClick={e=>this.setState({tab:2})}
@@ -86,7 +86,7 @@ class IndexPage extends React.Component {
                   classNames({
                     'tab-slected': this.state.tab == 2
                   })}
-              >企业特辑</NavBarItem>
+              ><p>企业特辑</p></NavBarItem>
               <NavBarItem
                 active={this.state.tab == 3}
                 onClick={e=>this.setState({tab:3})}
@@ -94,11 +94,11 @@ class IndexPage extends React.Component {
                   classNames({
                     'tab-slected': this.state.tab == 3
                   })}
-              >我想共创</NavBarItem>
+              ><p>我想共创</p></NavBarItem>
             </NavBar>
             <TabBody>
               <ButtonPage display={this.state.tab == 0 ? null : 'none'} />
-             <StrategyPage display={this.state.tab ==1 ? null: 'none'} />
+              <StrategyPage display={this.state.tab ==1 ? null: 'none'} />
               <CompanyPage display={this.state.tab == 2 ? null : 'none'} />
               <StudyPage display={this.state.tab == 3?null:'none'}/>
               </TabBody>
