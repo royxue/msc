@@ -56,7 +56,7 @@ class IndexPage extends React.Component {
             'mask_image_hidden':!this.state.mask,
             'mask_image_visible':this.state.mask
           })}>
-          <img 
+          <img onClick={this.handleClick}
               src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
               style={{height:'40%'}}/></div>
           <Image />
