@@ -6,7 +6,6 @@ import {
 } from "react-weui";
 import classNames from "classnames"
 
-
 class ColBox extends React.Component {
   state = {
     show: false

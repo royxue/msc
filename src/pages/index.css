@@ -90,12 +90,13 @@ body {
   text-align: left;
   text-overflow: none;
   white-space: normal;
+  font-weight: bold;
 }
 
 .box-more {
   margin-top: 0.5rem;
   width: 100%;
-  text-align: center;
+  text-align: right;
 }
 
 .footer-block {
@@ -145,3 +146,9 @@ body {
   bottom: 0;
   opacity: 1;
 }
+
+li{
+  padding: 2px;
+  align-content: center;
+}
+p.thick {font-weight: bold}

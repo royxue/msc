@@ -103,7 +103,8 @@ class IndexPage extends React.Component {
               <StudyPage display={this.state.tab == 3?null:'none'}/>
               </TabBody>
           </Tab>
-          <FooterBlock change={this.handleClick} popup={this.state.mask}/>
+          <div style={{display:'block'}}>
+          <FooterBlock change={this.handleClick} popup={this.state.mask}/></div>
         </Page>
       </div>
     )
