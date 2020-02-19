@@ -19,8 +19,8 @@ class CompanyPage extends React.Component {
   render() {
     return(
       <div style={{display: this.props.display}}>
-      <p className='countup'>
-        已收入 <CountUp start={this.props.display ? 92 : 93} end={101} duration={5} /> 个案例
+      <p className='countup' style={{textAlign:'center'}}>
+        已收入 <CountUp start={this.props.display ? 92: 93} end={101} duration={8} /> 个案例
       </p>
       <Tab >
       <NavBar>
@@ -31,7 +31,7 @@ class CompanyPage extends React.Component {
           classNames({
             'small_navbar_active': this.state.tab == 0
           })}
-        ><p>分类1</p></NavBarItem>
+        ><p>信息流通</p></NavBarItem>
         <NavBarItem
         active={this.state.tab == 1}
         onClick={e=>this.setState({tab:1})}
@@ -39,7 +39,23 @@ class CompanyPage extends React.Component {
           classNames({
             'small_navbar_active': this.state.tab == 1
           })}
-        ><p>分类2</p></NavBarItem>
+        ><p>效率提升</p></NavBarItem>
+        <NavBarItem
+        active={this.state.tab == 2}
+        onClick={e=>this.setState({tab:2})}
+        className={
+          classNames({
+            'small_navbar_active': this.state.tab == 2
+          })}
+        ><p>科技保障</p></NavBarItem>
+        <NavBarItem
+        active={this.state.tab == 3}
+        onClick={e=>this.setState({tab:3})}
+        className={
+          classNames({
+            'small_navbar_active': this.state.tab == 3
+          })}
+        ><p>科技向善</p></NavBarItem> 
         {/*
         <NavBarItem
         active={this.state.tab == 2}
