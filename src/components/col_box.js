@@ -4,8 +4,8 @@ import {
   MediaBoxTitle,
   MediaBoxDescription,
 } from "react-weui";
-import classNames from "classnames"
 
+import classNames from "classnames"
 class ColBox extends React.Component {
   state = {
     show: false
@@ -40,9 +40,10 @@ class ColBox extends React.Component {
         <MediaBoxDescription className={boxClass}>
           <p dangerouslySetInnerHTML={{__html:this.props.content}}></p>
         </MediaBoxDescription>
+        <div className='box-more'>
         <p onClick={this.showBox} className='box-more'>
           {this.state.show? '收起' : '查看更多'}
-        </p>
+        </p></div>
       </MediaBox>
     )
   }

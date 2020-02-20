@@ -3,6 +3,7 @@ import {
   Panel,
   PanelBody,
   MediaBox,
+  MediaBoxHeader,
   MediaBoxTitle,
   MediaBoxDescription,
   Flex,
@@ -10,6 +11,7 @@ import {
 import _ from "lodash";
 
 import ColBox from "../components/col_box";
+import appMsgIcon from "../images/heart.png";
 
 const DATA = {
   strategy: [
@@ -72,8 +74,16 @@ class StrategyPage extends React.Component {
     return(
       <Panel style={{display: this.props.display}}>
         <PanelBody style={{display:'inline'}}>
+          <MediaBox type="appmsg">
+          <MediaBoxHeader>{appMsgIcon}</MediaBoxHeader>
+            <MediaBoxTitle>
+              <p>企业复苏新周期：战略型灾情应对10问</p>
+            </MediaBoxTitle>
+            <MediaBoxDescription>
+              <p>请在每一问开头代入“我、企业、团队”</p>
+            </MediaBoxDescription>
+          </MediaBox>
           {boxList}
-          
         </PanelBody>
       </Panel>
     )
