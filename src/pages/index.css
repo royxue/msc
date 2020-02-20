@@ -6,11 +6,6 @@ body {
   display: none;
 }
 
-.react-weui-infiniteloader__content{
-  height:100%;
-  -webkit-overflow-scrolling: touch;
-  z-index: 1;
-}
 
 .weui-btn, .weui-btn:after {
   border-radius: 0;
@@ -139,6 +134,7 @@ body {
 }
 ._mask{
   display:none;
+  height:100vh;
 }
 .mask_image_hidden{
   position:fixed;
