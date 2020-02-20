@@ -42,7 +42,6 @@ class IndexPage extends React.Component {
           <meta charSet="utf-8" />
           <title>MSC World</title>
         </Helmet>
-        <Page>
           <div>
           <div onClick={this.handleClick}
       className={
@@ -104,7 +103,7 @@ class IndexPage extends React.Component {
               </TabBody>
           </Tab>
           </div>
-        </Page>
+        <div className="placeholder" />
         <div className="footer">
           <FooterBlock change={this.handleClick} popup={this.state.mask}/>
         </div>

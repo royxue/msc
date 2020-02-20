@@ -16,8 +16,8 @@ body {
   content: initial;
 }
 
-.navinone {
-  position: absolute;
+.placeholder {
+  height: 4rem;
 }
 
 .btn-page {
@@ -130,7 +130,7 @@ body {
 
 .footer-block {
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   height: 4rem;
