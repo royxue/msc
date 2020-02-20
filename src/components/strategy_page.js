@@ -73,7 +73,7 @@ class StrategyPage extends React.Component {
       <Panel style={{display: this.props.display}}>
         <PanelBody style={{display:'inline'}}>
           {boxList}
-          <div><br/><br/><br/></div>
+          
         </PanelBody>
       </Panel>
     )

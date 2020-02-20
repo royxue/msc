@@ -2,6 +2,10 @@ body {
   color: #333;
 }
 
+@font-face{
+  font-family: 'title-font';
+  src: url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.eot");
+}
 .weui-loadmore {
   display: none;
 }
@@ -11,7 +15,10 @@ body {
   padding: 0;
   position: inherit;
 }
-
+.weui-media-box:before{
+  border-top: 3px solid #959595;
+  padding: .45rem .45rem .45rem 0;
+}
 .weui-btn:after {
   content: initial;
 }
@@ -78,11 +85,12 @@ body {
 .box-show {
   -webkit-line-clamp: 999;
   color: #333333;
-  font-size: 0.85rem;
+  font-size: 0.25rem;
 }
 
 .box-hide {
-  display: none;
+  font-size: .25rem;
+  -webkit-line-clamp: 3;
 }
 
 .box-title {
@@ -91,12 +99,20 @@ body {
   text-overflow: none;
   white-space: normal;
   font-weight: bold;
+  color: #1b1b1b;
+  font-size: .28rem;
+  margin-bottom: .15rem;
+  font-weight: 700;
+  font-family: 'title-font';
 }
 
 .box-more {
   margin-top: 0.5rem;
   width: 100%;
   text-align: right;
+  text-decoration: underline;
+  font-size: .24rem;
+  font-weight: 400;
 }
 
 .footer-block {
