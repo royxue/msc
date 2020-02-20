@@ -7,7 +7,7 @@ body {
 }
 
 .react-weui-infiniteloader__content{
-  bottom: 0;
+  height:100%;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   z-index: 1;
@@ -152,7 +152,7 @@ body {
   right: 0;
   left: 40%;
   bottom: 0;
-  height:20%;
+  height:10%;
   opacity: 1;
 }
 
