@@ -39,8 +39,6 @@ class StudyPage extends React.Component {
           {boxList}
         </PanelBody>
       </Panel>
-      <br/><br/><br/>
-        <br/><br/><br/>
       </div>
     )
   }
