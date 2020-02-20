@@ -116,7 +116,7 @@ body {
   -webkit-line-clamp: 999;
   color: #333333;
   font-size: 0.25rem;
-  line-height: .36rem;
+  line-height: 150%;
 }
 
 .box-hide {

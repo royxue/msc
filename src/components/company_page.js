@@ -16,7 +16,7 @@ import './company_page.css'
 import classNames from "classnames";
 import CountUp from 'react-countup';
 const appMsgIcon = 
-  <img src="https://github.com/royxue/msc/blob/dev/src/images/heart.png?raw=true" style={{height:'65%', width:'65%'}}/>
+  <img src="https://github.com/royxue/msc/blob/dev/src/images/company.png?raw=true" style={{height:'65%', width:'65%'}}/>
 class CompanyPage extends React.Component {
   state = {
     tab: 0
@@ -31,8 +31,8 @@ class CompanyPage extends React.Component {
       <MediaBox type="appmsg">
           <MediaBoxHeader>{appMsgIcon}</MediaBoxHeader>
             <MediaBoxTitle>
-              <p className='small-title'>企业复苏新周期：战略型灾情应对10问</p>
-              <p className='small-subtitle'>请在每一问开头代入“我、企业、团队”</p>
+              <p className='small-title'>企业特辑:企业除了捐赠，还可以做什么？</p>
+              <p className='small-subtitle'>案例持续增加中，已有300+</p>
             </MediaBoxTitle>
           </MediaBox>
       <Tab>
