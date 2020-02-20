@@ -6,12 +6,7 @@ body {
   display: none;
 }
 
-.react-weui-infiniteloader__content{
-  overflow:scroll;
-  -webkit-overflow-scrolling: touch;
-  z-index:1;
-  height:100vh;
-}
+
 .weui-btn, .weui-btn:after {
   border-radius: 0;
   padding: 0;

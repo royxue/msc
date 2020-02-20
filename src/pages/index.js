@@ -42,7 +42,6 @@ class IndexPage extends React.Component {
           <meta charSet="utf-8" />
           <title>MSC World</title>
         </Helmet>
-        <Page>
         <div onClick={this.handleClick}
       className={
         classNames({
@@ -61,6 +60,7 @@ class IndexPage extends React.Component {
           <img src={imgurl}
             style={{width:'100%', margin: '0 0 -0.5rem 0'}}
           />
+        <Page>
           <Tab>
             <NavBar>
               <NavBarItem
