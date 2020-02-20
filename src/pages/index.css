@@ -8,7 +8,11 @@ body {
 
 .react-weui-infiniteloader__content{
   bottom: 0;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
 }
+
 .weui-btn, .weui-btn:after {
   border-radius: 0;
   padding: 0;
@@ -146,8 +150,9 @@ body {
   z-index: 1000;
   top: 0;
   right: 0;
-  left: 55%;
+  left: 40%;
   bottom: 0;
+  height:20%;
   opacity: 1;
 }
 
@@ -155,4 +160,5 @@ li{
   padding: 2px;
   align-content: center;
 }
+
 p.thick {font-weight: bold}

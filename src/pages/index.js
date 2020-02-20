@@ -57,7 +57,7 @@ class IndexPage extends React.Component {
           })}>
           <img
               src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
-              style={{height:'30%', right: '0'}}/></div>
+              /></div>
           <img src={imgurl}
             style={{width:'100%', margin: '0 0 -0.5rem 0'}}
           />
