@@ -6,6 +6,7 @@ body {
   font-family: 'title-font';
   src: url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.eot");
 }
+
 .weui-loadmore {
   display: none;
 }
@@ -207,3 +208,17 @@ li{
 }
 
 p.thick {font-weight: bold}
+
+.small-title{
+  font-weight: bold;
+  font-size:14px;
+}
+
+.small-subtitle{
+  font-size:12px;
+  color: #333333;
+}
+/*
+.weui-media-box:nth-child(2):before{
+  display: none;
+}*/

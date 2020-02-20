@@ -3,14 +3,20 @@ import {
   Tab,
   NavBar,
   NavBarItem,
-  TabBody
+  TabBody,
+  MediaBox,
+  MediaBoxBody,
+  MediaBoxHeader,
+  MediaBoxDescription,
+  MediaBoxTitle
 } from "react-weui";
 
 import CompanyPanel from './company_panel';
 import './company_page.css'
 import classNames from "classnames";
 import CountUp from 'react-countup';
-
+const appMsgIcon = 
+  <img src="https://github.com/royxue/msc/blob/dev/src/images/heart.png?raw=true" style={{height:'65%', width:'65%'}}/>
 class CompanyPage extends React.Component {
   state = {
     tab: 0
@@ -22,7 +28,14 @@ class CompanyPage extends React.Component {
       <p className='countup' style={{textAlign:'center'}}>
         已收入 <CountUp start={this.props.display ? 92: 93} end={101} duration={8} /> 个案例
       </p>
-      <Tab >
+      <MediaBox type="appmsg">
+          <MediaBoxHeader>{appMsgIcon}</MediaBoxHeader>
+            <MediaBoxTitle>
+              <p className='small-title'>企业复苏新周期：战略型灾情应对10问</p>
+              <p className='small-subtitle'>请在每一问开头代入“我、企业、团队”</p>
+            </MediaBoxTitle>
+          </MediaBox>
+      <Tab>
       <NavBar>
         <NavBarItem
         active={this.state.tab == 0}
