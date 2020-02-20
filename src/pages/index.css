@@ -16,6 +16,10 @@ body {
   content: initial;
 }
 
+.navinone {
+  position: absolute;
+}
+
 .btn-page {
   color: #333333;
   background-color: #e6f7ff;
@@ -100,10 +104,6 @@ body {
   border-right-color: #333;
 } */
 
-.btn-placeholder {
-  height: 4.5rem;
-}
-
 .box-show {
   -webkit-line-clamp: 999;
   color: #333333;
@@ -135,6 +135,7 @@ body {
   width: 100%;
   height: 4rem;
   background-color: #E0E0E0;
+  z-index: 10000;
 }
 
 .footer-block div {

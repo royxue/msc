@@ -65,7 +65,7 @@ class StrategyPage extends React.Component {
 
     var boxList = _.map(DATA['strategy'], (strategy) =>
       {
-        return <ColBox title={strategy.title} content={strategy.content} />
+        return <ColBox key={strategy.title} title={strategy.title} content={strategy.content} />
       }
     )
 

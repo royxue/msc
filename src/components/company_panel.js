@@ -540,7 +540,6 @@ class CompanyPanel extends React.Component {
       <Panel style={{display: this.props.display}}>
         <PanelBody>
           {mediaboxList}
-          <br/><br/><br/>
         </PanelBody>
       </Panel>
     )

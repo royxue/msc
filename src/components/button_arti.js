@@ -24,7 +24,6 @@ class ButtonArticle extends React.Component {
           type="default"
           onClick={this.props.onBtnClick}
           style={{width: '60%'}}>返回</Button>
-        <div className="btn-placeholder" />
       </div>
       )
     }

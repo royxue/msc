@@ -43,7 +43,6 @@ class IndexPage extends React.Component {
           <title>MSC World</title>
         </Helmet>
         <Page>
-        
           <div>
           <div onClick={this.handleClick}
       className={
@@ -52,18 +51,18 @@ class IndexPage extends React.Component {
           '_mask':!this.state.mask
         })}>
         <div onClick={this.handleClick}
-        class={classNames({
+        className={classNames({
             'mask_image_hidden':!this.state.mask,
             'mask_image_visible':this.state.mask
           })}>
           <img
               src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
-              /></div></div>
+          /></div></div>
           <img src={imgurl}
             style={{position: 'flex', width:'100%', margin: '0 0 -0.5rem 0'}}
           />
           <Tab style={{position:'flex'}}>
-            <NavBar>
+            <NavBar id='navinone'>
               <NavBarItem
                 active={this.state.tab == 0}
                 onClick={e=>this.setState({tab:0})}
@@ -105,10 +104,10 @@ class IndexPage extends React.Component {
               </TabBody>
           </Tab>
           </div>
-          <div style={{display:'block', position:'flex'}}>
-          <FooterBlock change={this.handleClick} popup={this.state.mask}/></div>
-          
         </Page>
+        <div className="footer">
+          <FooterBlock change={this.handleClick} popup={this.state.mask}/>
+        </div>
       </div>
     )
   }
