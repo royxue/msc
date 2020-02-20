@@ -56,7 +56,7 @@ class IndexPage extends React.Component {
             'mask_image_visible':this.state.mask
           })}>
           <img
-              src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
+              src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png' style={{height:'100px'}}
               /></div>
           <img src={imgurl}
             style={{width:'100%', margin: '0 0 -0.5rem 0'}}
@@ -101,7 +101,7 @@ class IndexPage extends React.Component {
               <StrategyPage display={this.state.tab ==1 ? null: 'none'} />
               <CompanyPage display={this.state.tab == 2 ? null : 'none'} />
               <StudyPage display={this.state.tab == 3?null:'none'}/>
-              
+              <br/><br/><br/>
               </TabBody>
           </Tab>
           <div style={{display:'block'}}>
