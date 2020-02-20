@@ -44,16 +44,13 @@ class ButtonPage extends React.Component {
                 2. 这份案例集与共创指南包含什么内容？
               </p>
               </Button>
-              {/*<Button type="default" onClick={e=>this.setState({page:3})}>
-                03. Wtf Am I
-              </Button>*/}
             </ButtonArea>
+            <br/><br/><br/>
+            <br/><br/><br/><br/><br/>
           </div>
+          <div>
           {article}
-          {/*
-          <ButtonArticle onBtnClick={e=>this.setState({page:0})} display={this.state.page == 2 ? null : 'none'} _page="2"/>
-          <ButtonArticle onBtnClick={e=>this.setState({page:0})} display={this.state.page == 3 ? null : 'none'} _page="3"/>
-          */}
+          </div>
         </div>
     )
   }

@@ -17,7 +17,7 @@ class ButtonArticle extends React.Component {
           >
         <Article>
           <h1>{this.props.title}</h1>
-          <section dangerouslySetInnerHTML={{__html:this.props.content}}>
+          <section  dangerouslySetInnerHTML={{__html:this.props.content}}>
           </section>
         </Article>
         <Button

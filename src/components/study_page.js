@@ -33,11 +33,15 @@ class StudyPage extends React.Component {
     })
 
     return(
+      <div>
       <Panel style={{display: this.props.display}}>
         <PanelBody>
           {boxList}
         </PanelBody>
       </Panel>
+      <br/><br/><br/>
+        <br/><br/><br/>
+      </div>
     )
   }
 }

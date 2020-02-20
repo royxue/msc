@@ -43,25 +43,26 @@ class IndexPage extends React.Component {
           <title>MSC World</title>
         </Helmet>
         <Page>
-        <div onClick={this.handleClick}
+        
+          <div>
+          <div onClick={this.handleClick}
       className={
         classNames({
           'mask':this.state.mask,
           '_mask':!this.state.mask
         })}>
-        </div>
         <div onClick={this.handleClick}
         class={classNames({
             'mask_image_hidden':!this.state.mask,
             'mask_image_visible':this.state.mask
           })}>
           <img
-              src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png' style={{height:'20%'}}
-              /></div>
+              src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
+              /></div></div>
           <img src={imgurl}
-            style={{width:'100%', margin: '0 0 -0.5rem 0'}}
+            style={{position: 'flex', width:'100%', margin: '0 0 -0.5rem 0'}}
           />
-          <Tab>
+          <Tab style={{position:'flex'}}>
             <NavBar>
               <NavBarItem
                 active={this.state.tab == 0}
@@ -101,11 +102,12 @@ class IndexPage extends React.Component {
               <StrategyPage display={this.state.tab ==1 ? null: 'none'} />
               <CompanyPage display={this.state.tab == 2 ? null : 'none'} />
               <StudyPage display={this.state.tab == 3?null:'none'}/>
-              <br/><br/><br/>
               </TabBody>
           </Tab>
-          <div style={{display:'block'}}>
+          </div>
+          <div style={{display:'block', position:'flex'}}>
           <FooterBlock change={this.handleClick} popup={this.state.mask}/></div>
+          
         </Page>
       </div>
     )
