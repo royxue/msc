@@ -6,7 +6,9 @@ body {
   display: none;
 }
 
-
+.react-weui-infiniteloader__content{
+  bottom: 0;
+}
 .weui-btn, .weui-btn:after {
   border-radius: 0;
   padding: 0;

@@ -42,6 +42,7 @@ class IndexPage extends React.Component {
           <meta charSet="utf-8" />
           <title>MSC World</title>
         </Helmet>
+        <Page>
         <div onClick={this.handleClick}
       className={
         classNames({
@@ -56,11 +57,10 @@ class IndexPage extends React.Component {
           })}>
           <img
               src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
-              style={{height:'40%'}}/></div>
+              style={{height:'30%', right: '0'}}/></div>
           <img src={imgurl}
             style={{width:'100%', margin: '0 0 -0.5rem 0'}}
           />
-        <Page>
           <Tab>
             <NavBar>
               <NavBarItem
@@ -101,6 +101,7 @@ class IndexPage extends React.Component {
               <StrategyPage display={this.state.tab ==1 ? null: 'none'} />
               <CompanyPage display={this.state.tab == 2 ? null : 'none'} />
               <StudyPage display={this.state.tab == 3?null:'none'}/>
+              
               </TabBody>
           </Tab>
           <div style={{display:'block'}}>
