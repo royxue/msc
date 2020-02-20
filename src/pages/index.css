@@ -21,10 +21,39 @@ body {
   background-color: #e6f7ff;
   text-align: left;
   padding: 0 1rem;
+  border: 1px solid #90a4ae;
+  font-weight: bold;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.25rem;
 }
 
 .btn-icon {
-  color: #fff;
+  align-self: center;
+  height: 1.25rem;
+  border-left: 1px solid #90a4ae;
+}
+
+.btn-stats {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats-item p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.stats-num {
+  font-size: 2rem;
+  margin-bottom: -0.5rem;
+}
+
+.stats-name {
+  font-size: 0.75rem;
 }
 
 .weui-panel {
@@ -119,6 +148,10 @@ body {
   padding: 0.5rem 2rem;
   background-color: #333333;
   color: #ffffff;
+}
+
+.footer-left .footer-btn {
+  background-color: #1890ff;
 }
 
 .mask{

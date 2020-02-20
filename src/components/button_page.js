@@ -19,6 +19,9 @@ const DATA= {
     }
   ]
 }
+
+const RIGHT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZElEQVRIiWNgGAVUAKsYGBj+I+FQalsgwsDA8ALJgtcMDAzi1LbEnwHVFxuobQEDw2hQkQBGWFAxkWkBOxr/J5nmYAUiDAwMLxlQg0iMmhbQNJLD0AxfSU3DR4MGJxjaQTMKGADY7US//AbyFgAAAABJRU5ErkJggg=="
+
 class ButtonPage extends React.Component {
   state = {
     page: 0
@@ -31,18 +34,32 @@ class ButtonPage extends React.Component {
     return (
         <div style={{display: this.props.display}}>
           <div style={{display: this.state.page == 0 ? null : 'none'}}>
+            <div className='btn-stats'>
+              <div className='stats-item'>
+                <p className='stats-num'>100</p>
+                <p className='stats-name'>企业贡献案例</p>
+              </div>
+              <div className='stats-item'>
+                <p className='stats-num'>200</p>
+                <p className='stats-name'>共创伙伴</p>
+              </div>
+              <div className='stats-item'>
+                <p className='stats-num'>77W</p>
+                <p className='stats-name'>媒体报告</p>
+              </div>
+            </div>
             <ButtonArea >
               <Button type="default" onClick={e=>this.setState({page:1})}>
-                <p className="btn-page" style={{fontSize:'17px'}}>
-                  1. 我们为什么要做出这份指南？
-                </p>
-
+                <div className="btn-page">
+                  01. 我们为什么要做出这份指南？
+                  <img className="btn-icon" src={RIGHT}/>
+                </div>
               </Button>
-
               <Button type="default" onClick={e=>this.setState({page:2})}>
-              <p className="btn-page" style={{fontSize:'17px'}}>
-                2. 这份案例集与共创指南包含什么内容？
-              </p>
+                <div className="btn-page">
+                  02. 这份案例集与共创指南包含什么内容？
+                  <img className="btn-icon" src={RIGHT}/>
+                </div>
               </Button>
             </ButtonArea>
             <br/><br/><br/>
