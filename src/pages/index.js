@@ -11,17 +11,15 @@ import classNames from "classnames";
 
 import ButtonPage from '../components/button_page';
 import CompanyPage from '../components/company_page';
-import Image from '../components/image';
 import StrategyPage from '../components/strategy_page';
 import StudyPage from '../components/study_page';
 import FooterBlock from '../components/footer_block';
-
-import MSCFooter from '../components/footer';
-
+import imgurl from '../images/banner';
 
 import 'weui';
 import 'react-weui/build/packages/react-weui.css';
 import './index.css'
+
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -60,7 +58,9 @@ class IndexPage extends React.Component {
           <img
               src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
               style={{height:'40%'}}/></div>
-          <Image />
+          <img src={imgurl}
+            style={{width:'100%', margin: '0 0 -0.5rem 0'}}
+          />
           <Tab>
             <NavBar>
               <NavBarItem
