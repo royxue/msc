@@ -13,7 +13,7 @@ import CompanyPanel from './company_panel';
 import './company_page.css'
 import classNames from "classnames";
 const appMsgIcon =
-  <img src="https://github.com/royxue/msc/blob/dev/src/images/company.png?raw=true" style={{height:'65%', width:'65%'}}/>
+  <img src="https://github.com/royxue/msc/blob/dev/src/images/company.png?raw=true" style={{height:'50%', width:'50%', marginTop: '.8rem'}}/>
 class CompanyPage extends React.Component {
   state = {
     tab: 0
