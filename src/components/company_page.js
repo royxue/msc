@@ -5,18 +5,18 @@ import {
   NavBarItem,
   TabBody,
   MediaBox,
-  MediaBoxBody,
   MediaBoxHeader,
-  MediaBoxDescription,
   MediaBoxTitle
 } from "react-weui";
 
 import CompanyPanel from './company_panel';
 import './company_page.css'
 import classNames from "classnames";
+
 import CountUp from 'react-countup';
 const appMsgIcon = 
   <img src="https://github.com/royxue/msc/blob/dev/src/images/company.png?raw=true" style={{height:'80%', width:'80%'}}/>
+
 class CompanyPage extends React.Component {
   state = {
     tab: 0
@@ -25,9 +25,9 @@ class CompanyPage extends React.Component {
   render() {
     return(
       <div style={{display: this.props.display}}>
-      <p className='countup' style={{textAlign:'center'}}>
+      {/* <p className='countup' style={{textAlign:'center'}}>
         已收入 <CountUp start={this.props.display ? 92: 93} end={101} duration={8} /> 个案例
-      </p>
+      </p> */}
       <MediaBox type="appmsg">
       <MediaBoxHeader
           className={
@@ -40,6 +40,7 @@ class CompanyPage extends React.Component {
               <p className='small-subtitle'>案例持续增加中，已有300+</p>
             </MediaBoxTitle>
           </MediaBox>
+
       <Tab>
       <NavBar>
         <NavBarItem
@@ -73,7 +74,7 @@ class CompanyPage extends React.Component {
           classNames({
             'small_navbar_active': this.state.tab == 3
           })}
-        ><p>科技向善</p></NavBarItem> 
+        ><p>科技向善</p></NavBarItem>
         {/*
         <NavBarItem
         active={this.state.tab == 2}

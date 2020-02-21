@@ -5,6 +5,8 @@ import {
 } from "react-weui"
 import _ from "lodash";
 import ButtonArticle from './button_arti';
+import CountUp from 'react-countup';
+
 const DATA= {
   info1:[
     {
@@ -36,11 +38,11 @@ class ButtonPage extends React.Component {
           <div style={{display: this.state.page == 0 ? null : 'none'}}>
             <div className='btn-stats'>
               <div className='stats-item'>
-                <p className='stats-num'>100</p>
+                <p className='stats-num'><CountUp start={this.props.display ? 84: 85} end={100} duration={5} /></p>
                 <p className='stats-name'>企业贡献案例</p>
               </div>
               <div className='stats-item'>
-                <p className='stats-num'>200</p>
+                <p className='stats-num'><CountUp start={this.props.display ? 174: 175} end={200} duration={5} /></p>
                 <p className='stats-name'>共创伙伴</p>
               </div>
               <div className='stats-item'>

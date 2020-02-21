@@ -1,6 +1,5 @@
 import React from "react"
 import {
-  Page,
   Tab,
   TabBody,
   NavBar,
@@ -27,8 +26,20 @@ class IndexPage extends React.Component {
     this.state={
       tab:0,
       mask: false,
+      isFixed: false
     }
     this.handleClick = this.handleClick.bind(this)
+  }
+  componentDidMount() {
+    const fixedTop = document.getElementById('banner').height;
+    window.onscroll = () => {
+      let scrollTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
+      if (scrollTop >= fixedTop) {
+        this.setState({ isFixed: true })
+      } else if (scrollTop < fixedTop) {
+        this.setState({ isFixed: false })
+      }
+    }
   }
   handleClick(){
     this.setState({
@@ -57,11 +68,13 @@ class IndexPage extends React.Component {
           <img
               src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png' style={{height:'75%', width:'75%'}}
           /></div></div>
-          <img src={imgurl}
+          <img id='banner' src={imgurl}
             style={{position: 'flex', width:'100%', margin: '0 0 -0.5rem 0'}}
           />
           <Tab style={{position:'flex'}}>
-            <NavBar id='navinone'>
+            <NavBar id='navinone' className={classNames({
+              'fixed-nav': this.state.isFixed
+            })}>
               <NavBarItem
                 active={this.state.tab == 0}
                 onClick={e=>this.setState({tab:0})}

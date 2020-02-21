@@ -4,9 +4,7 @@ import {
   PanelBody,
   MediaBox,
   MediaBoxHeader,
-  MediaBoxTitle,
-  MediaBoxDescription,
-  Flex,
+  MediaBoxTitle
 } from "react-weui";
 import _ from "lodash";
 
@@ -15,6 +13,7 @@ import classNames from "classnames";
 
 const appMsgIcon = 
   <img src="https://github.com/royxue/msc/blob/dev/src/images/heart.png?raw=true" style={{height:'80%', width:'80%'}}/>
+
 
 const DATA = {
   strategy: [

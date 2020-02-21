@@ -1,10 +1,7 @@
 import React, { useLayoutEffect } from "react"
 import {
     Panel,
-    PanelBody,
-    MediaBox,
-    MediaBoxTitle,
-    MediaBoxDescription
+    PanelBody
   } from "react-weui";
 import _ from "lodash";
 import ColBox from "../components/col_box";

@@ -25,8 +25,26 @@ body {
   content: initial;
 }
 
+.weui-navbar__item:after {
+  height: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.weui-navbar__item p {
+  font-size: 0.85rem;
+}
+
+.weui-panel__bd:before {
+  content: initial;
+}
+
 .placeholder {
   height: 4rem;
+}
+
+.fixed-nav {
+  position: fixed;
 }
 
 .btn-page {
@@ -166,9 +184,12 @@ body {
 }
 
 .footer-btn {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   background-color: #333333;
   color: #ffffff;
+  width: 6rem;
+  text-align: center;
+  font-size: .8rem;
 }
 
 .footer-left .footer-btn {
