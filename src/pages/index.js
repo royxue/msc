@@ -55,7 +55,7 @@ class IndexPage extends React.Component {
             'mask_image_visible':this.state.mask
           })}>
           <img
-              src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png'
+              src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png' style={{height:'75%', width:'75%'}}
           /></div></div>
           <img src={imgurl}
             style={{position: 'flex', width:'100%', margin: '0 0 -0.5rem 0'}}

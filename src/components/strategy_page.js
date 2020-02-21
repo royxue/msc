@@ -11,9 +11,10 @@ import {
 import _ from "lodash";
 
 import ColBox from "../components/col_box";
+import classNames from "classnames";
 
 const appMsgIcon = 
-  <img src="https://github.com/royxue/msc/blob/dev/src/images/heart.png?raw=true" style={{height:'65%', width:'65%'}}/>
+  <img src="https://github.com/royxue/msc/blob/dev/src/images/heart.png?raw=true" style={{height:'80%', width:'80%'}}/>
 
 const DATA = {
   strategy: [
@@ -77,7 +78,13 @@ class StrategyPage extends React.Component {
       <Panel style={{display: this.props.display}}>
         <PanelBody style={{display:'inline'}}>
           <MediaBox type="appmsg">
-          <MediaBoxHeader>{appMsgIcon}</MediaBoxHeader>
+          <MediaBoxHeader
+          className={
+          classNames({
+            'modified-md-header': true
+          })}
+        >{appMsgIcon}
+            </MediaBoxHeader>
             <MediaBoxTitle>
               <p className='small-title'>企业复苏新周期：战略型灾情应对10问</p>
               <p className='small-subtitle'>请在每一问开头代入“我、企业、团队”</p>

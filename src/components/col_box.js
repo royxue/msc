@@ -6,6 +6,11 @@ import {
 } from "react-weui";
 
 import classNames from "classnames"
+const load_Img=
+  <img src="https://github.com/royxue/msc/blob/dev/src/images/load_arrow.png?raw=true" style={{transform:'rotate(90deg)', height:'2%', width:'2%', 'margin-right':'4px'}}/>
+const load_Img_up=
+  <img src="https://github.com/royxue/msc/blob/dev/src/images/load_arrow.png?raw=true" style={{transform:'rotate(270deg)', height:'2%', width:'2%', 'margin-right':'4px'}}/>
+
 class ColBox extends React.Component {
   state = {
     show: false
@@ -41,8 +46,10 @@ class ColBox extends React.Component {
           <p dangerouslySetInnerHTML={{__html:this.props.content}}></p>
         </MediaBoxDescription>
         <div className='box-more'>
-        <p onClick={this.showBox} className='box-more'>
-          {this.state.show? '收起' : '查看更多'}
+        <p onClick={this.showBox} className='box-more' style={{display: this.props.need_flag}}>
+          <div>{this.state.show? null:load_Img}
+          {this.state.show? load_Img_up:null}
+          {this.state.show? '收起' : '查看更多'}</div>
         </p></div>
       </MediaBox>
     )
