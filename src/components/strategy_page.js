@@ -4,15 +4,13 @@ import {
   PanelBody,
   MediaBox,
   MediaBoxHeader,
-  MediaBoxTitle,
-  MediaBoxDescription,
-  Flex,
+  MediaBoxTitle
 } from "react-weui";
 import _ from "lodash";
 
 import ColBox from "../components/col_box";
 
-const appMsgIcon = 
+const appMsgIcon =
   <img src="https://github.com/royxue/msc/blob/dev/src/images/heart.png?raw=true" style={{height:'65%', width:'65%'}}/>
 
 const DATA = {

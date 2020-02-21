@@ -1,6 +1,5 @@
 import React from "react"
 import {
-  Page,
   Tab,
   TabBody,
   NavBar,

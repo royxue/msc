@@ -5,16 +5,13 @@ import {
   NavBarItem,
   TabBody,
   MediaBox,
-  MediaBoxBody,
   MediaBoxHeader,
-  MediaBoxDescription,
   MediaBoxTitle
 } from "react-weui";
 
 import CompanyPanel from './company_panel';
 import './company_page.css'
 import classNames from "classnames";
-import CountUp from 'react-countup';
 const appMsgIcon =
   <img src="https://github.com/royxue/msc/blob/dev/src/images/company.png?raw=true" style={{height:'65%', width:'65%'}}/>
 class CompanyPage extends React.Component {

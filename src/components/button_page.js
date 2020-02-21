@@ -5,6 +5,8 @@ import {
 } from "react-weui"
 import _ from "lodash";
 import ButtonArticle from './button_arti';
+import CountUp from 'react-countup';
+
 const DATA= {
   info1:[
     {
