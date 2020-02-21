@@ -2,11 +2,6 @@ body {
   color: #333;
 }
 
-@font-face{
-  font-family: 'title-font';
-  src: url("//db.onlinewebfonts.com/t/05e476e067ffef74ca5686f229c40a63.eot");
-}
-
 .weui-loadmore {
   display: none;
 }
@@ -35,6 +30,13 @@ body {
   font-size: 0.85rem;
 }
 
+<<<<<<< HEAD
+=======
+.weui-panel:before {
+  display: none;
+}
+
+>>>>>>> 6fb94a0bf26a3b78d44b56a8a322d048a329cef9
 .placeholder {
   height: 4rem;
 }
@@ -50,7 +52,7 @@ body {
   padding: 0 1rem;
   border: 1px solid #90a4ae;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,22 +115,6 @@ body {
   background: #1890ff;
 }
 
-/* .tab-slected::before,
-.tab-slected::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-
-.tab-slected::before {
-  border-width: 0.5em;
-  border-bottom-color: #333;
-  border-right-color: #333;
-} */
-
 .box-show {
   -webkit-line-clamp: 999;
   color: #333333;
@@ -152,7 +138,6 @@ body {
   font-size: 14px;
   margin-bottom: .15rem;
   font-weight: 700;
-  font-family: 'title-font';
 }
 
 .box-more {
@@ -162,6 +147,10 @@ body {
   text-decoration: underline;
   font-size: 11px;
   font-weight: 400;
+}
+
+.company-tab {
+  background-color: #fff;
 }
 
 .footer-block {
