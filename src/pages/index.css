@@ -35,10 +35,6 @@ body {
   font-size: 0.85rem;
 }
 
-.weui-panel__bd:before {
-  content: initial;
-}
-
 .placeholder {
   height: 4rem;
 }
@@ -90,7 +86,9 @@ body {
 .weui-panel {
   margin-top: 0;
 }
-
+.weui-panel::before{
+  display: none;
+}
 .tab-slected {
   font-weight: bold;
   color: #1890ff;
