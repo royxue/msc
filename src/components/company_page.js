@@ -14,7 +14,7 @@ import './company_page.css'
 import classNames from "classnames";
 
 import CountUp from 'react-countup';
-const appMsgIcon = 
+const appMsgIcon =
   <img src="https://github.com/royxue/msc/blob/dev/src/images/company.png?raw=true" style={{height:'80%', width:'80%'}}/>
 
 class CompanyPage extends React.Component {
@@ -42,7 +42,7 @@ class CompanyPage extends React.Component {
           </MediaBox>
 
       <Tab>
-      <NavBar>
+      <NavBar className='company-tab'>
         <NavBarItem
         active={this.state.tab == 0}
         onClick={e=>this.setState({tab:0})}
