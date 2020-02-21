@@ -30,13 +30,9 @@ body {
   font-size: 0.85rem;
 }
 
-<<<<<<< HEAD
-=======
 .weui-panel:before {
   display: none;
 }
-
->>>>>>> 6fb94a0bf26a3b78d44b56a8a322d048a329cef9
 .placeholder {
   height: 4rem;
 }
