@@ -278,6 +278,14 @@ p.thick {font-weight: bold}
   font-size:12px;
 }
 
+.dialog-close {
+  color: black;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.3rem;
+}
+
 .box-back-top{
   z-index:800;
   position:fixed;
@@ -302,10 +310,6 @@ p.thick {font-weight: bold}
   transform:rotate(45deg);
 }
 
-.dialog-close {
-  color: black;
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
-  font-size: 1.3rem;
+.btn-footer {
+  z-index: 10001;
 }

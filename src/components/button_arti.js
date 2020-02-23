@@ -5,9 +5,6 @@ import {
 } from "react-weui"
 
 class ButtonArticle extends React.Component {
-  componentDidMount() {
-    this.props.changeFooter();
-  }
   parseToDOM(str){
     var div = document.createElement("div")
     if(typeof str ==="string")
