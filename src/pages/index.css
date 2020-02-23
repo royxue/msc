@@ -272,15 +272,15 @@ p.thick {font-weight: bold}
 .box-back-top{
   z-index:800;
   position:fixed;
-  left:0%;
-  bottom: 8%;
+  right:0%;
+  bottom:15%;
   height:20px;
   width: 30px;    
   text-align:center;
   padding-top:10px;    
   background-color: lightblue;
   border-radius: 20%;
-  overflow: hidden;
+  opacity:60%;
 }
 .box-back-top-in{
   visibility: visible;

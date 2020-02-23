@@ -52,7 +52,7 @@ class StudyPage extends React.Component {
                 </div>
               </Button>
       </ButtonArea>
-        </PanelBody>
+      </PanelBody>
       </Panel>
     )
   }
