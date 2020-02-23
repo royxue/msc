@@ -5,6 +5,9 @@ import {
 } from "react-weui"
 
 class ButtonArticle extends React.Component {
+  componentDidMount() {
+    this.props.changeFooter();
+  }
   parseToDOM(str){
     var div = document.createElement("div")
     if(typeof str ==="string")
@@ -13,17 +16,12 @@ class ButtonArticle extends React.Component {
   }
   render() {
     return (
-      <div style={{display: this.props.display}}
-          >
+      <div style={{display: this.props.display}}>
         <Article>
           <h1>{this.props.title}</h1>
           <section  dangerouslySetInnerHTML={{__html:this.props.content}}>
           </section>
         </Article>
-        <Button
-          type="default"
-          onClick={this.props.onBtnClick}
-          style={{width: '60%'}}>返回</Button>
       </div>
       )
     }

@@ -58,7 +58,7 @@ body {
 .btn-icon {
   align-self: center;
   height: 1.25rem;
-  border-left: 1px solid #90a4ae;
+  /* border-left: 1px solid #90a4ae; */
 }
 
 .btn-stats {
@@ -275,9 +275,9 @@ p.thick {font-weight: bold}
   left:0%;
   bottom: 8%;
   height:20px;
-  width: 30px;    
+  width: 30px;
   text-align:center;
-  padding-top:10px;    
+  padding-top:10px;
   background-color: lightblue;
   border-radius: 20%;
   overflow: hidden;
@@ -290,4 +290,11 @@ p.thick {font-weight: bold}
   border: 3px solid black;
   border-color: white transparent transparent white;
   transform:rotate(45deg);
+
+.dialog-close {
+  color: black;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.3rem;
 }
