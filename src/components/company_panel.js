@@ -525,9 +525,9 @@ class CompanyPanel extends React.Component {
     var mediaboxList = _.map(DATA[this.props._class], (company) =>
       {
         return <div>
-          <table border="0" className="company_box">
+          <table border="0" className="company_box"><tbody>
     <tr>
-        <td><table border="0">
+        <td><table border="0"><tbody>
         <tr><td>
         <MediaBox 
         type="appmsg" href={company.link}>
@@ -544,31 +544,32 @@ class CompanyPanel extends React.Component {
           </MediaBox>
           </td></tr>
           <tr>
-            <table border="0"><tr>
-            <td style={{'padding-left':'10px'}}></td>
+            <table border="0"><tbody><tr>
+            <td style={{'paddingLeft':'10px'}}></td>
             <td className="label-box" style={{
-            'background-color':'#FFAA33'}}>
+            'backgroundColor':'#FFAA33'}}>
             <p className="label-text">在线协作</p></td>
-            <td style={{'padding-left':'2px'}}></td>
+            <td style={{'paddingLeft':'2px'}}></td>
             <td className="label-box" 
             style={{
-            'background-color':'#00AA55'}}><p className="label-text">技术</p></td>
-            <td style={{'padding-left':'2px'}}></td>
+            'backgroundColor':'#00AA55'}}><p className="label-text">技术</p></td>
+            <td style={{'paddingLeft':'2px'}}></td>
             <td className="label-box" 
             style={{
-            'background-color':'#FF0000'}}><p className="label-text">急需志愿者</p></td>
-            <td style={{'padding-left':'2px'}}></td>
+            'backgroundColor':'#FF0000'}}><p className="label-text">急需志愿者</p></td>
+            <td style={{'paddingLeft':'2px'}}></td>
             </tr>
+            </tbody>
             </table>
-          </tr></table>
+          </tr></tbody></table>
           </td>
-          <td style={{'border-left-style':'solid', 'border-width': '0.5px','border-color':'#E5E5E5'}}><div style={{'padding':'10px', 'background-image':'url(https://github.com/royxue/msc/blob/dev/src/images/load_arrow.png?raw=true)','background-repeat':'no-repeat',
-          'background-position':'center',
-          'margin-left':'5px',
-          'margin-right':'10px'}}></div>
+          <td style={{'borderLeftStyle':'solid', 'borderWidth': '0.5px','borderColor':'#E5E5E5'}}><div style={{'padding':'10px', 'backgroundImage':'url(https://github.com/royxue/msc/blob/dev/src/images/load_arrow.png?raw=true)','backgroundRepeat':'no-repeat',
+          'backgroundPosition':'center',
+          'marginLeft':'5px',
+          'marginRight':'10px'}}></div>
           </td>
     </tr><tr><td style={{'padding':'2px'}}></td></tr>
-</table></div>
+    </tbody></table></div>
       }
     )
     return (

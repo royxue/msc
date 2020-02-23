@@ -1,22 +1,21 @@
 import React, { useLayoutEffect } from "react"
 import {
     Panel,
-    PanelBody
+    PanelBody,
+    Button,
+    ButtonArea
   } from "react-weui";
 import _ from "lodash";
 import ColBox from "../components/col_box";
 import { black } from "color-name";
 
+const RIGHT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZElEQVRIiWNgGAVUAKsYGBj+I+FQalsgwsDA8ALJgtcMDAzi1LbEnwHVFxuobQEDw2hQkQBGWFAxkWkBOxr/J5nmYAUiDAwMLxlQg0iMmhbQNJLD0AxfSU3DR4MGJxjaQTMKGADY7US//AbyFgAAAABJRU5ErkJggg=="
 
 const DATA= {
   info:[
     {
-      title:"如你愿意加入到该案例集与共创指南中，你将获得：",
-      description:"<div style='color:black'><ul><li>• 微网站企业案例收录</li><li>• 疫情结束后出版的《企业疫情参与白皮书》</li><li>• 企业疫情参与影像实录(视频形式)</li></ul></div>"
-    },
-    {
-      title:"如何加入",
-      description:"<div style='color:black'>请联系stephanie@msc-world，邮件标题请注明【企业名称 + 疫情应对共创加入】</div>"
+      title:"<p style='font-size:18px'>什么是特别行动？</p>",
+      description:"<div style='font-size:14px'>面对大幅增加的线上，对产品供给进行充分及时的保障，确保基本民生诉求能够尽可能的满足。</div>"
     }
   ]
 }
@@ -35,15 +34,26 @@ class StudyPage extends React.Component {
     })
 
     return(
-      <div>
       <Panel style={{display: this.props.display}}>
         <PanelBody>
           {boxList}
-          <hr style={{'border-top': '1px solid #959595'}}></hr>
+          
+          <ButtonArea >
+              <Button type="default" onClick={e=>this.setState({page:1})}>
+                <div className="btn-page">
+                  特别行动：xxxxxxxxxx
+                  <img className="btn-icon" src={RIGHT}/>
+                </div>
+              </Button>
+              <Button type="default" onClick={e=>this.setState({page:2})}>
+                <div className="btn-page">
+                特别行动：xxxxxxxxxx
+                  <img className="btn-icon" src={RIGHT}/>
+                </div>
+              </Button>
+      </ButtonArea>
         </PanelBody>
       </Panel>
-      
-      </div>
     )
   }
 }

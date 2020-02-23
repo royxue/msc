@@ -46,6 +46,9 @@ class IndexPage extends React.Component {
       mask: !this.state.mask
     })
   }
+  back2top(){
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
   render() {
     return (
       <div>
@@ -106,13 +109,16 @@ class IndexPage extends React.Component {
                   classNames({
                     'tab-slected': this.state.tab == 3
                   })}
-              ><p>我想共创</p></NavBarItem>
+              ><p>企业善举</p></NavBarItem>
             </NavBar>
             <TabBody>
               <ButtonPage display={this.state.tab == 0 ? null : 'none'} />
               <StrategyPage display={this.state.tab ==1 ? null: 'none'} />
               <CompanyPage display={this.state.tab == 2 ? null : 'none'} />
               <StudyPage display={this.state.tab == 3?null:'none'}/>
+              <div class="box-back-top" onClick={this.back2top}>
+              <div class="box-back-top-in"></div>
+              </div>
               </TabBody>
           </Tab>
           </div>
