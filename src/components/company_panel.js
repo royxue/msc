@@ -529,16 +529,16 @@ class CompanyPanel extends React.Component {
     <tr>
         <td><table border="0"><tbody>
         <tr><td>
-        <MediaBox 
+        <MediaBox
         type="appmsg" href={company.link}>
           <MediaBoxHeader><img src={company.img_src}/>
             </MediaBoxHeader>
           <MediaBoxBody>
             <MediaBoxTitle>
-              {company.title}
+              <p style={{'fontSize':'14px'}}>{company.title}</p>
             </MediaBoxTitle>
             <MediaBoxDescription>
-              {company.content}
+              <p style={{'fontSize':'10px'}}>{company.content}</p>
             </MediaBoxDescription>
           </MediaBoxBody>
           </MediaBox>

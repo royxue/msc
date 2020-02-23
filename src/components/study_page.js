@@ -30,7 +30,9 @@ class StudyPage extends React.Component {
     }
 
     var boxList = _.map(DATA['info'], (info) => {
-      return <ColBox title={info.title} content = {info.description} need_flag = {this.state.need_flag}/>
+      return <ColBox title={info.title} 
+      content = {info.description} 
+      need_flag = {this.state.need_flag}/>
     })
 
     return(

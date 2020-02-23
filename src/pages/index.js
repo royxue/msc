@@ -50,6 +50,8 @@ class IndexPage extends React.Component {
   }
   back2top(){
     document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
+  
   changeFooter = () => {
     this.setState({ footer: false });
   }
@@ -123,8 +125,8 @@ class IndexPage extends React.Component {
               <StrategyPage display={this.state.tab ==1 ? null: 'none'} />
               <CompanyPage display={this.state.tab == 2 ? null : 'none'} />
               <StudyPage display={this.state.tab == 3?null:'none'}/>
-              <div class="box-back-top" onClick={this.back2top}>
-              <div class="box-back-top-in"></div>
+              <div className="box-back-top" onClick={this.back2top}>
+              <div className="box-back-top-in"></div>
               </div>
               </TabBody>
           </Tab>
