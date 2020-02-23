@@ -289,8 +289,8 @@ p.thick {font-weight: bold}
 .box-back-top{
   z-index:800;
   position:fixed;
-  right:0%;
-  bottom:15%;
+  right:5%;
+  bottom:10%;
   height:20px;
   width: 30px;
   text-align:center;
