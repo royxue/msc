@@ -3,7 +3,8 @@ import {
   Tab,
   TabBody,
   NavBar,
-  NavBarItem
+  NavBarItem,
+  Dialog
 } from "react-weui"
 import { Helmet } from "react-helmet"
 import classNames from "classnames";
@@ -26,7 +27,8 @@ class IndexPage extends React.Component {
     this.state={
       tab:0,
       mask: false,
-      isFixed: false
+      isFixed: false,
+      footer: true
     }
     this.handleClick = this.handleClick.bind(this)
   }
@@ -48,6 +50,11 @@ class IndexPage extends React.Component {
   }
   back2top(){
     document.body.scrollTop = document.documentElement.scrollTop = 0;
+  changeFooter = () => {
+    this.setState({ footer: false });
+  }
+  goBack = () => {
+    this.setState({ footer: true });
   }
   render() {
     return (
@@ -112,7 +119,7 @@ class IndexPage extends React.Component {
               ><p>企业善举</p></NavBarItem>
             </NavBar>
             <TabBody>
-              <ButtonPage display={this.state.tab == 0 ? null : 'none'} />
+              <ButtonPage display={this.state.tab == 0 ? null : 'none'} changeFooter={this.changeFooter} page={this.state.footer}/>
               <StrategyPage display={this.state.tab ==1 ? null: 'none'} />
               <CompanyPage display={this.state.tab == 2 ? null : 'none'} />
               <StudyPage display={this.state.tab == 3?null:'none'}/>
@@ -124,7 +131,9 @@ class IndexPage extends React.Component {
           </div>
         <div className="placeholder" />
         <div className="footer">
-          <FooterBlock change={this.handleClick} popup={this.state.mask}/>
+          <FooterBlock change={this.handleClick} popup={this.state.mask} index={this.state.footer}
+            goBack={this.goBack}
+          />
         </div>
       </div>
     )

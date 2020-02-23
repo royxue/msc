@@ -22,16 +22,32 @@ const DATA= {
   ]
 }
 
-const RIGHT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZElEQVRIiWNgGAVUAKsYGBj+I+FQalsgwsDA8ALJgtcMDAzi1LbEnwHVFxuobQEDw2hQkQBGWFAxkWkBOxr/J5nmYAUiDAwMLxlQg0iMmhbQNJLD0AxfSU3DR4MGJxjaQTMKGADY7US//AbyFgAAAABJRU5ErkJggg=="
+const RIGHT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAACdElEQVR4nO3bvWoVQRjG8Z9fyS1EJGmUKLkJ04tamGChtRJzCZaKV+AHWmshooUQsDMoXkIIGDuR2GhlFKMxFrNhU5w9nNVz3plD9oFlds/uzLzPf+fsDss7dOrUqdMB1qEBrpnBdZzF1IB1cmoXn7GKh/j4P40t40fV6Dhu37HUz2C/u7mMu/uO17CBX/0aLEDHMIu5fb/dwIM2jcyo7/wXXBpWdIFawFf1SJhuU/mOehgtDD20OF1U+7jVpuK7qtLaCIKK1rrk5W2vk4cbKk1V5YdRRBSs91V5vNfJJgBHqvL30MOJ156Ho71ONgE4MOoABPRxEvcwH9BXa0UAuClNRF7hXEB/rRQB4Dl2MFntFwUhAsAKrkhP40m8wIWAfgdS1EPwKa5KECbwTCEQIt8CRUKIfg0WByHHPKAoCLkmQsVAyDkTLAJC7qlwdgi5AZAZQgkAyAihFABkglASADJAKA0AwRBKBEAghFIBhKlUAJfxWPqQuY1FvBxFRyUCCDNPeQBCzVMWgHDzlAMgi3nKAJDNPPkBZDVPXgDZzZMPQBHmyQOgGPPEAyjKPLEAijNPHIAizdOQNTFknccTKevkp5RxthLQ70CKGAELCjVPzAi4jW/SR443Af21UgSADSnrtEjlngpnVweg4fedqoz4i4xaex565jw2AdisylNDDydes1W52etkE4DVqpwz3snSizhT7b9uU3FaSjHflVLOxxHCojpdfgsnel3Ub8HEEu7vO16XEo+3hxTgqDSB0+o7T1ry8+hfGltSj4Rx3LZwrZ/BQRZATVeNzEtp9KW/Ov9ID7xVadHUp6zRdOrUqVPJ+gswbfgyDFqGOQAAAABJRU5ErkJggg=="
 
 class ButtonPage extends React.Component {
   state = {
     page: 0
   }
 
+  componentWillReceiveProps() {
+    console.log(this.props.page)
+    console.log(this.state.page)
+    if (!this.props.page && this.state.page != 0)
+      this.setState({
+        page: 0
+      })
+  }
+
   render() {
     var article = _.map(DATA['info'+this.state.page], (info)=> {
-      return <ButtonArticle onBtnClick={e=>this.setState({page:0})} display={this.state.page != 0 ? null : 'none'} _page={this.state.page} title={info.title} content={info.content}/>
+      return <ButtonArticle key={info.title}
+                            onBtnClick={e=>this.setState({page:0})}
+                            display={this.state.page != 0 ? null : 'none'}
+                            _page={this.state.page}
+                            title={info.title}
+                            content={info.content}
+                            changeFooter={this.props.changeFooter}
+            />
     })
     return (
         <div style={{display: this.props.display}}>
@@ -64,8 +80,6 @@ class ButtonPage extends React.Component {
                 </div>
               </Button>
             </ButtonArea>
-            <br/><br/><br/>
-            <br/><br/><br/><br/><br/>
           </div>
           <div>
           {article}
