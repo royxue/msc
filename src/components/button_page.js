@@ -60,8 +60,8 @@ class ButtonPage extends React.Component {
                 <p className='stats-name'>共创伙伴</p>
               </div>
               <div className='stats-item'>
-                <p className='stats-num'>77W</p>
-                <p className='stats-name'>媒体报告</p>
+                <p className='stats-num'><CountUp start={this.props.display ? 60: 61} end={77} duration={5} /></p>
+                <p className='stats-name'>万媒体报告</p>
               </div>
             </div>
             <ButtonArea >

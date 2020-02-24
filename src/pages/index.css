@@ -21,7 +21,7 @@ body {
 }
 
 .weui-media-box:before{
-  border-top: 3px solid #959595;
+  border-top: 2px solid #E5E5E5;
   padding: .45rem .45rem .45rem 0;
   left:0;
 }
@@ -42,6 +42,13 @@ body {
 .weui-panel:before {
   display: none;
 }
+
+.weui-tab__panel
+{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .placeholder {
   height: 4rem;
 }
