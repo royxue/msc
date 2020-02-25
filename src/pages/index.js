@@ -123,7 +123,6 @@ class IndexPage extends React.Component {
               </TabBody>
           </Tab>
           </div>
-        <div className="placeholder" />
         <div className="footer">
           <FooterBlock change={this.handleClick} popup={this.state.mask} mode={0}/>
         </div>

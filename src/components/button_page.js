@@ -23,7 +23,9 @@ class ButtonPage extends React.Component {
   render() {
     if (this.state.page != 0){
       var idxf = document.getElementById('index-footer');
-      idxf.classList.add("footer-hide");
+      if (idxf) {
+        idxf.classList.add("nodisplay");
+      }
     } else {
       var idxf;
       if (typeof window === "undefined" || !window.document) {
@@ -33,7 +35,7 @@ class ButtonPage extends React.Component {
       }
 
       if (idxf) {
-        idxf.classList.remove("footer-hide");
+        idxf.classList.remove("nodisplay");
       }
     }
     const article = data[this.state.page - 1]
@@ -81,6 +83,7 @@ class ButtonPage extends React.Component {
           <FooterBlock mode={1} show={this.state.page != 0}
               goback={this.goback}/>
           </div>
+          <div className="placeholder" />
         </div>
     )
   }
