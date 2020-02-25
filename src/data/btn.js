@@ -9,7 +9,7 @@ const data= [
     },
     {
       title: "3. 怎么加入共创",
-      content: "tbd"
+      content: "<p>加特辑负责人微信进入共创群，与志同道合的伙伴们一起沟通探讨。</p><br/><p style='font-weight:bold'>加入共创可以做什么?</p><ol type='i' style='margin-left:10px !important'><li>提供企业自身应对灾情的案例素材</li><li>有机会联合MSC咨询、第一财经共同发起共创“特别行动”或发掘新的合作项目</li></ol><br/><p style='font-weight:bold'>共创权益</p><ol type='i' style='margin-left:10px !important'><li>全面、带有深度洞察和分析的企业疫情应对案例集，及企业案例品牌露出</li><li>基于[战略型10问] 一对一线上定制化咨询，时长2小时（疫情后可改为线下）</li><li>线下疫情应对企业内训，时长2-3小时</li><li>影响力学院线上付费栏目收听权限（自选一项）</li><li>企业宣传视频编辑（内容形式与时长限定）</li><li>品牌类：未来出版的疫情专题白皮书中特别鸣谢署名，品牌露出；共创伙伴自媒体矩阵【XXX】微网站特别鸣谢</li><li>可持续消费报告鸣谢署名</li>"
     }
   ]
 
