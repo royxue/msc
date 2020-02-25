@@ -33,7 +33,7 @@ class StudyPage extends React.Component {
           </MediaBoxHeader>
           <MediaBoxTitle>
               <p className='small-title'>什么是特别行动？</p>
-              <p className='small-subtitle'>面对大幅增加的线上，对产品供给进行充分及时的保障，确保基本民生诉求能够尽可能的满足。</p>
+              <p className='small-subtitle'>面对大幅增加的线上，对产品供给进行充分及时的保</p><p className='small-subtitle'>障，确保基本民生诉求能够尽可能的满足。</p>
           </MediaBoxTitle>
           </MediaBox>
           <ButtonArea >
