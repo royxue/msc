@@ -534,11 +534,11 @@ class CompanyPanel extends React.Component {
           <MediaBoxHeader><img src={company.img_src}/>
             </MediaBoxHeader>
           <MediaBoxBody>
-            <MediaBoxTitle>
-              <p style={{'fontSize':'14px'}}>{company.title}</p>
+            <MediaBoxTitle style={{'fontSize':'14px'}}>
+              {company.title}
             </MediaBoxTitle>
-            <MediaBoxDescription>
-              <p style={{'fontSize':'10px'}}>{company.content}</p>
+            <MediaBoxDescription style={{'fontSize':'10px'}}>
+              {company.content}
             </MediaBoxDescription>
           </MediaBoxBody>
           </MediaBox>
@@ -569,7 +569,8 @@ class CompanyPanel extends React.Component {
           'marginRight':'10px'}}></div>
           </td>
     </tr><tr><td style={{'padding':'2px'}}></td></tr>
-    </tbody></table></div>
+    </tbody></table>
+    </div>
       }
     )
     return (

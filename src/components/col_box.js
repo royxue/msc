@@ -45,10 +45,13 @@ class ColBox extends React.Component {
         <MediaBoxDescription className={boxClass}>
           <p dangerouslySetInnerHTML={{__html:this.props.content}}></p>
         </MediaBoxDescription>
-        <div onClick={this.showBox} className='box-more' style={{display: this.props.need_flag}}>
-          <div>{this.state.show? null:load_Img}
+        <div onClick={this.showBox} className={classNames({
+          'box-more': this.props.need_flag !='none',
+          'box-none': this.props.need_flag == 'none'
+        })}>
+          <div>
+          {this.state.show? null:load_Img}
           {this.state.show? load_Img_up:null}
-          {this.state.show? '收起' : '查看更多'}
           </div>
         </div>
       </MediaBox>
