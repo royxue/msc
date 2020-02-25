@@ -33,10 +33,8 @@ class IndexPage extends React.Component {
   }
   componentDidMount() {
     const fixedTop = document.getElementById('banner').height;
-    console.log(fixedTop)
     window.onscroll = () => {
       let scrollTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
-      console.log(fixedTop, scrollTop);
       if (scrollTop >= fixedTop) {
         this.setState({ isFixed: true })
       } else if (scrollTop < fixedTop) {
