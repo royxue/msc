@@ -97,10 +97,10 @@ class CompanyPage extends React.Component {
         */}
       </NavBar>
       <TabBody>
-        <CompanyPanel display={this.state.tab == 0 ? null : 'none'} _class = "company1"/>
-        <CompanyPanel display={this.state.tab == 1 ? null : 'none'} _class = "company2"/>
-        <CompanyPanel display={this.state.tab == 2 ? null : 'none'} _class = "company3"/>
-        <CompanyPanel display={this.state.tab == 3 ? null : 'none'} _class = "company4"/>
+        <CompanyPanel display={this.state.tab == 0 ? null : 'none'} _class = "page1"/>
+        <CompanyPanel display={this.state.tab == 1 ? null : 'none'} _class = "page2"/>
+        <CompanyPanel display={this.state.tab == 2 ? null : 'none'} _class = "page3"/>
+        <CompanyPanel display={this.state.tab == 3 ? null : 'none'} _class = "page4"/>
       </TabBody>
     </Tab>
     </div>

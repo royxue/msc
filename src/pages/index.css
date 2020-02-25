@@ -330,3 +330,6 @@ p.thick {font-weight: bold}
 .btn-footer {
   z-index: 10001;
 }
+.nodisplay{
+  display:none;
+}
