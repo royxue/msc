@@ -21,7 +21,7 @@ body {
 }
 
 .weui-media-box:before{
-  border-top: 3px solid #959595;
+  border-top: 2px solid #E5E5E5;
   padding: .45rem .45rem .45rem 0;
   left:0;
 }
@@ -42,13 +42,20 @@ body {
 .weui-panel:before {
   display: none;
 }
+
+.weui-tab__panel
+{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .placeholder {
   height: 4rem;
 }
-/*
+
 .fixed-nav {
   position: fixed;
-}*/
+}
 
 .btn-page {
   color: #333333;
@@ -278,11 +285,19 @@ p.thick {font-weight: bold}
   font-size:12px;
 }
 
+.dialog-close {
+  color: black;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.3rem;
+}
+
 .box-back-top{
   z-index:800;
   position:fixed;
-  right:0%;
-  bottom:15%;
+  right:5%;
+  bottom:10%;
   height:20px;
   width: 30px;
   text-align:center;
@@ -310,5 +325,8 @@ p.thick {font-weight: bold}
   font-size: 1.3rem;
 }
 .box-none{
-  content:"";
+  content:"";}
+
+.btn-footer {
+  z-index: 10001;
 }

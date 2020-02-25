@@ -6,6 +6,7 @@ import {
 import _ from "lodash";
 import ButtonArticle from './button_arti';
 import CountUp from 'react-countup';
+import FooterBlock from './footer_block';
 
 const DATA= {
   info1:[
@@ -29,24 +30,21 @@ class ButtonPage extends React.Component {
     page: 0
   }
 
-  componentWillReceiveProps() {
-    console.log(this.props.page)
-    console.log(this.state.page)
-    if (!this.props.page && this.state.page != 0)
-      this.setState({
-        page: 0
-      })
+  goback = () => {
+    this.setState({ page: 0})
+  }
+
+  componentWillUpdate() {
+    console.log(this.state)
   }
 
   render() {
     var article = _.map(DATA['info'+this.state.page], (info)=> {
       return <ButtonArticle key={info.title}
-                            onBtnClick={e=>this.setState({page:0})}
                             display={this.state.page != 0 ? null : 'none'}
                             _page={this.state.page}
                             title={info.title}
                             content={info.content}
-                            changeFooter={this.props.changeFooter}
             />
     })
     return (
@@ -62,8 +60,8 @@ class ButtonPage extends React.Component {
                 <p className='stats-name'>共创伙伴</p>
               </div>
               <div className='stats-item'>
-                <p className='stats-num'>77W</p>
-                <p className='stats-name'>媒体报告</p>
+                <p className='stats-num'><CountUp start={this.props.display ? 60: 61} end={77} duration={5} /></p>
+                <p className='stats-name'>万媒体报告</p>
               </div>
             </div>
             <ButtonArea >
@@ -83,6 +81,8 @@ class ButtonPage extends React.Component {
           </div>
           <div>
           {article}
+          <FooterBlock mode={1} show={this.state.page != 0}
+              goback={this.goback}/>
           </div>
         </div>
     )
