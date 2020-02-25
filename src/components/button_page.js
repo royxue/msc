@@ -21,6 +21,21 @@ class ButtonPage extends React.Component {
   }
 
   render() {
+    if (this.state.page != 0){
+      var idxf = document.getElementById('index-footer');
+      idxf.classList.add("footer-hide");
+    } else {
+      var idxf;
+      if (typeof window === "undefined" || !window.document) {
+        idxf = undefined;
+      } else {
+        idxf = document.getElementById('index-footer');
+      }
+
+      if (idxf) {
+        idxf.classList.remove("footer-hide");
+      }
+    }
     const article = data[this.state.page - 1]
     var btns = _.map(data, (info, idx) => {
       const realidx = idx + 1;
