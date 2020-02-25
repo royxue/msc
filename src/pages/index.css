@@ -327,12 +327,12 @@ p.thick {font-weight: bold}
 .box-none{
   content:"";}
 
-/* .btn-footer {
-  z-index: 10001;
-} */
+.btn-footer {
+  left: 0;
+}
 
 .footer-hide {
-  z-index: -1;
+  display: none;
 }
 
 .nodisplay{
