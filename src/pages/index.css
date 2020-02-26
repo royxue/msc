@@ -329,8 +329,9 @@ p.thick {font-weight: bold}
   content:"";}
 
 .btn-footer {
-  z-index: 10001;
+  left: 0;
 }
+
 .nodisplay{
   display:none;
 }

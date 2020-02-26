@@ -21,6 +21,23 @@ class ButtonPage extends React.Component {
   }
 
   render() {
+    if (this.state.page != 0){
+      var idxf = document.getElementById('index-footer');
+      if (idxf) {
+        idxf.classList.add("nodisplay");
+      }
+    } else {
+      var idxf;
+      if (typeof window === "undefined" || !window.document) {
+        idxf = undefined;
+      } else {
+        idxf = document.getElementById('index-footer');
+      }
+
+      if (idxf) {
+        idxf.classList.remove("nodisplay");
+      }
+    }
     const article = data[this.state.page - 1]
     var btns = _.map(data, (info, idx) => {
       const realidx = idx + 1;
@@ -66,6 +83,7 @@ class ButtonPage extends React.Component {
           <FooterBlock mode={1} show={this.state.page != 0}
               goback={this.goback}/>
           </div>
+          <div className="placeholder" />
         </div>
     )
   }

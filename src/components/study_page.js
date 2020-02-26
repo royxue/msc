@@ -55,6 +55,7 @@ class StudyPage extends React.Component {
               </Button>
       </ButtonArea>
       </PanelBody>
+      <div className="placeholder" />
       </Panel>
   )}
 }

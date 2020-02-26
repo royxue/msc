@@ -49,6 +49,7 @@ class StrategyPage extends React.Component {
           </MediaBox>
           {boxList}
         </PanelBody>
+        <div className="placeholder" />
       </Panel>
     )
   }
