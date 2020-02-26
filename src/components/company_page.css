@@ -1,51 +1,10 @@
-/*.small_navbar{
-    position: relative;
-    display: block;
-    flex: 1 1;
-    padding: 13px 0;
-    text-align: center;
-    font-size: 15px;
-    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-}
-.small_navbar::before{
-    content: "";
-    display: block;
-    width: 1px;
-    height: .78rem;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    background: #959595;
-}
-.small_navbar::after{
-    position: relative;
-    display: block;
-    flex: 1 1;
-    padding: 13px 0;
-    text-align: center;
-    font-size: 15px;
-    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
-}*/
+
 .small_navbar_active{
     font-weight: bold;
     color: #1890ff;
     background-color: #e6f7ff !important;
 }
-/*
-.small_navbar_active::before{
-    content: "";
-    display: block;
-    width: 1px;
-    height: .78rem;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    background: #959595;
-}*/
+
 .small_navbar_active p::after{
     content: "";
     display: block;
