@@ -101,6 +101,7 @@ class CompanyPage extends React.Component {
         <CompanyPanel display={this.state.tab == 1 ? null : 'none'} _class = "page2"/>
         <CompanyPanel display={this.state.tab == 2 ? null : 'none'} _class = "page3"/>
         <CompanyPanel display={this.state.tab == 3 ? null : 'none'} _class = "page4"/>
+        <br/><br/>
       </TabBody>
     </Tab>
     </div>
