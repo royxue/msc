@@ -19,19 +19,7 @@ const appMsgIcon =
 
 class CompanyPage extends React.Component {
   state = {
-    tab: 0,
-    isFixed: false
-  }
-  componentDidMount() {
-    const fixedTop = document.getElementById('header').height;
-    window.onscroll = () => {
-      let scrollTop = Math.max(document.body.scrollTop, document.documentElement.scrollTop)
-      if (scrollTop >= fixedTop) {
-        this.setState({ isFixed: true })
-      } else if (scrollTop < fixedTop) {
-        this.setState({ isFixed: false })
-      }
-    }
+    tab: 0
   }
   render() {
     return(
@@ -53,10 +41,8 @@ class CompanyPage extends React.Component {
             </MediaBoxTitle>
           </MediaBox>
 
-      <Tab style={{position:'flex'}}>
-      <NavBar id='company-tab' className={classNames({
-              'fixed-nav': this.state.isFixed
-            })}>
+      <Tab>
+      <NavBar>
         <NavBarItem
         active={this.state.tab == 0}
         onClick={e=>this.setState({tab:0})}
@@ -117,7 +103,6 @@ class CompanyPage extends React.Component {
         <CompanyPanel display={this.state.tab == 3 ? null : 'none'} _class = "page4"/>
       </TabBody>
     </Tab>
-    <div className="placeholder" />
     </div>
     )
   }
