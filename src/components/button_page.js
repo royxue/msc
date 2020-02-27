@@ -79,7 +79,6 @@ class ButtonPage extends React.Component {
               content={article.content}
               /> : null
           }
-
           <FooterBlock mode={1} show={this.state.page != 0}
               goback={this.goback}/>
           </div>
