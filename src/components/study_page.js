@@ -11,7 +11,6 @@ import {
 import _ from "lodash";
 import classNames from "classnames";
 import ButtonArticle from './button_arti';
-import CountUp from 'react-countup';
 import FooterBlock from './footer_block';
 import data from '../data/activity';
 const RIGHT = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZElEQVRIiWNgGAVUAKsYGBj+I+FQalsgwsDA8ALJgtcMDAzi1LbEnwHVFxuobQEDw2hQkQBGWFAxkWkBOxr/J5nmYAUiDAwMLxlQg0iMmhbQNJLD0AxfSU3DR4MGJxjaQTMKGADY7US//AbyFgAAAABJRU5ErkJggg=="
@@ -72,13 +71,19 @@ class StudyPage extends React.Component {
       </div>
       <div>
       {
-            (this.state.page != 0) ?
+            (this.state.page != 0) ?<div> 
               <ButtonArticle
               display={this.state.page != 0? null : 'none'}
               _page={this.state.page-1}
               title={data[this.state.page-1].title}
               content={data[this.state.page-1].content}
-              /> : null
+              /> 
+              <Button type="default" onClick={e=>this.setState({page:0})} style={{'width':'18%'}}>
+              <div className="btn-page">返回
+              </div>
+              </Button>
+              </div>
+              : null
       }
       </div>
       <div className="placeholder" />
