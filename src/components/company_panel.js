@@ -30,7 +30,9 @@ class CompanyPanel extends React.Component {
         >
           <MediaBoxHeader className={
           classNames({'nodisplay': company.img_src == ""})
-        }><img src={company.img_src}/>
+        }><img src={company.img_src} className={classNames({
+            'small-logo': false
+        })}/>
             </MediaBoxHeader>
           <MediaBoxBody>
             <MediaBoxTitle style={{'fontSize':'14px'}}>

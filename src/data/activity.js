@@ -1,13 +1,13 @@
-const DATA={
-    info:[
+
+const DATA=[
         {
-          title:"<p style='font-size:18px'>什么是特别行动？</p>",
-          description:"<div style='font-size:14px'>面对大幅增加的线上，对产品供给进行充分及时的保障，确保基本民生诉求能够尽可能的满足。</div>"
+          title:"《企业疫情参与白皮书》",
+          content:"<div style='font-size:14px'>请加特别行动负责人微信stephanie_c09获取白皮书具体信息</div>"
         },
         {
-            title:"",
-            description:""
+            title:"2020爱的力量公益影像计划",
+            content:"<img src= 'https://github.com/royxue/msc/blob/dev/src/images/activity.jpeg?raw=true'/>"
         }
       ]
-}
+
 export default DATA;

@@ -66,7 +66,7 @@ class CompanyPage extends React.Component {
           classNames({
             'small_navbar_active': this.state.tab == 2
           })}
-        ><p>科技保障</p></NavBarItem>
+        ><p>后勤保障</p></NavBarItem>
         <NavBarItem
         active={this.state.tab == 3}
         onClick={e=>this.setState({tab:3})}

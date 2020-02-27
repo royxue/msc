@@ -361,3 +361,6 @@ p.thick {font-weight: bold}
 #space-box:first-child{
   padding-left: 0px !important;
 }
+.weui-media-box__thumb{
+  vertical-align: baseline !important;
+}
