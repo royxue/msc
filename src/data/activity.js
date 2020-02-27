@@ -6,7 +6,7 @@ const DATA=[
         },
         {
             title:"2020爱的力量公益影像计划",
-            content:"<img src= 'https://github.com/royxue/msc/blob/dev/src/images/activity.jpeg?raw=true'/>"
+            content:"<img src= 'https://msc-1253849667.cos.ap-chengdu.myqcloud.com/images/activity.jpeg'/>"
         }
       ]
 

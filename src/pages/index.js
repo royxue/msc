@@ -56,6 +56,7 @@ class IndexPage extends React.Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>MSC World</title>
+          <description>疫情共创指南</description>
         </Helmet>
           <div>
           <div onClick={this.handleClick}
@@ -110,7 +111,7 @@ class IndexPage extends React.Component {
                   classNames({
                     'tab-slected': this.state.tab == 3
                   })}
-              ><p>企业善举</p></NavBarItem>
+              ><p>特别行动</p></NavBarItem>
             </NavBar>
             <TabBody>
               <ButtonPage display={this.state.tab == 0 ? null : 'none'}/>
