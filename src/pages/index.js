@@ -19,6 +19,7 @@ import 'react-weui/build/packages/react-weui.css';
 import './index.css'
 
 import banner from '../images/banner.png';
+import share from '../images/share.png';
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -70,7 +71,7 @@ class IndexPage extends React.Component {
             'mask_image_visible':this.state.mask
           })}>
           <img
-              src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png' style={{height:'75%', width:'75%'}}
+              src={share} style={{height:'75%', width:'75%'}}
           /></div></div>
           <img id='banner' src={banner}
             style={{position: 'flex', width:'100%', margin: '0 0 -0.5rem 0'}}
