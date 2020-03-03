@@ -3,8 +3,7 @@ import {
   Tab,
   TabBody,
   NavBar,
-  NavBarItem,
-  Dialog
+  NavBarItem
 } from "react-weui"
 import { Helmet } from "react-helmet"
 import classNames from "classnames";
@@ -14,12 +13,12 @@ import CompanyPage from '../components/company_page';
 import StrategyPage from '../components/strategy_page';
 import StudyPage from '../components/study_page';
 import FooterBlock from '../components/footer_block';
-import imgurl from '../images/banner';
 
 import 'weui';
 import 'react-weui/build/packages/react-weui.css';
 import './index.css'
 
+import banner from '../images/banner.png';
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -55,7 +54,7 @@ class IndexPage extends React.Component {
       <div>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>MSC World</title>
+          <title>可持续商业指南</title>
           <description>疫情共创指南</description>
         </Helmet>
           <div>
@@ -73,7 +72,7 @@ class IndexPage extends React.Component {
           <img
               src='https://teleworking.nplusdigital.cn/h5/static/img/share-tips.d30bd0a.png' style={{height:'75%', width:'75%'}}
           /></div></div>
-          <img id='banner' src={imgurl}
+          <img id='banner' src={banner}
             style={{position: 'flex', width:'100%', margin: '0 0 -0.5rem 0'}}
           />
           <Tab style={{position:'flex'}}>

@@ -13,8 +13,6 @@ import _ from "lodash";
 import data from '../data/company_info';
 import CompanyBox from './company_box';
 import classNames from "classnames";
-const load_Img=
-  <img src="https://github.com/royxue/msc/blob/dev/src/images/load_arrow.png?raw=true" style={{transform:'rotate(180deg)', height:'2%', width:'2%', 'margin-right':'4px'}}/>
 
 class CompanyPanel extends React.Component {
   render () {

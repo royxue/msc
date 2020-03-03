@@ -2,6 +2,8 @@ import React from "react";
 import {
   Dialog
 } from "react-weui";
+import joinusimg from '../images/joinus.jpeg';
+
 
 class FooterBlock extends React.Component {
   constructor(props){
@@ -26,7 +28,7 @@ class FooterBlock extends React.Component {
       <Dialog id='qrshare' type="ios" title="加入共创" show={this.state.showQR}>
         长按扫码参加
         <p onClick={this.handleQRhide} className="dialog-close">x</p>
-        <img className='joinus' src="https://msc-1253849667.cos.ap-chengdu.myqcloud.com/images/joinus.jpeg"/>
+        <img className='joinus' src={joinusimg}/>
       </Dialog>
       {this.props.mode == 0 ?
         <div className="footer-block" id='index-footer'>
