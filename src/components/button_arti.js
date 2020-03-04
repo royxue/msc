@@ -3,6 +3,7 @@ import {
   Article,
   Button
 } from "react-weui"
+import sponsor from '../images/sponsor.png';
 
 class ButtonArticle extends React.Component {
   parseToDOM(str){

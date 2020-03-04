@@ -5,6 +5,8 @@
   "version": "0.0.1",
   "author": "Roy Xue <royxue@gmail.com>",
   "dependencies": {
+    "axios": "^0.19.2",
+    "circular-json": "^0.5.9",
     "classnames": "^2.2.6",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
@@ -21,6 +23,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-weui": "^1.2.2",
+    "typescript": "^3.8.3",
+    "weixin-js-sdk": "^1.4.0-test",
     "weui": "^1.1.0"
   },
   "devDependencies": {

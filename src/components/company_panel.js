@@ -16,12 +16,11 @@ import classNames from "classnames";
 
 class CompanyPanel extends React.Component {
   render () {
-    var mediaboxList = _.map(data[this.props._class], (company) =>
-      {
-        return <div>
+    var mediaboxList = _.map(data[this.props._class], (company)=>{
+      return <div>
           <table border="0" className="company_box"><tbody>
-    <tr>
-        <td><table border="0"><tbody>
+            <tr>
+              <td><table border="0"><tbody>
         <tr><td>
         <MediaBox
         type="appmsg" href={company.link}

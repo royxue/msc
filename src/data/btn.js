@@ -1,3 +1,4 @@
+
 const data= [
     {
       title:"1.	我们为什么要做出这份指南？",
@@ -5,7 +6,7 @@ const data= [
     },
     {
       title:"2.	这份指南包含什么内容？",
-      content:"<p>【企业可持续商业指南】共包含三部分内容：</p><br/><ul style='list-style-type: none'><li style='font-weight:bold;white-space:nowrap;'>1.「战略型灾情应对十问」</li><li><p style='font-weight:bold'>2.「企业疫情应对案例集」</p><p>如果希望将你的案例提交给我们，请添加指南负责人微信stephanie_c09并备注「疫情共创」，我们会将你的内容同步到：</p><p>-【可持续商业指南】微网站</p><p>-「企业疫情应对案例集」白皮书（电子版&实体书）</p></li><li><p style='font-weight:bold'>3.「特别行动」</p>「特别行动」是专门为此次指南的共创伙伴提供的联合平台，任何人可以发起行动，如果你想发起行动，也请添加指南负责人微信stephanie_c09并备注「疫情共创」，我们会将你的行动同步到：<p>-【可持续商业指南】微网站</p><p>-「疫情共创」微信群</p><p>- 各共创伙伴的微信公众号矩阵</p><p>- 第一财经新媒体矩阵</p><p>已有共创伙伴&特别鸣谢：</p></li></ul>"
+      content:"<p>【企业可持续商业指南】共包含三部分内容：</p><br/><ul style='list-style-type: none'><li style='font-weight:bold;white-space:nowrap;'>1.「战略型灾情应对十问」</li><li><p style='font-weight:bold'>2.「企业疫情应对案例集」</p><p>如果希望将你的案例提交给我们，请添加指南负责人微信stephanie_c09并备注「疫情共创」，我们会将你的内容同步到：</p><p>-【可持续商业指南】微网站</p><p>-「企业疫情应对案例集」白皮书（电子版&实体书）</p></li><li><p style='font-weight:bold'>3.「特别行动」</p>「特别行动」是专门为此次指南的共创伙伴提供的联合平台，任何人可以发起行动，如果你想发起行动，也请添加指南负责人微信stephanie_c09并备注「疫情共创」，我们会将你的行动同步到：<p>-【可持续商业指南】微网站</p><p>-「疫情共创」微信群</p><p>- 各共创伙伴的微信公众号矩阵</p><p>- 第一财经新媒体矩阵</p><p>已有共创伙伴&特别鸣谢：</p></li></ul><img src='https://mscworld-1253849667.cos.ap-shanghai.myqcloud.com/images/sponsor.jpg'/>"
     },
     {
       title: "3. 怎么加入共创",

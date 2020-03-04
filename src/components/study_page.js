@@ -59,7 +59,7 @@ class StudyPage extends React.Component {
                   <img className="btn-icon" src={right}/>
                 </div>
               </Button>
-              <Button type="default" onClick={e=>this.setState({page:3})}>
+              <Button type="default" href=''>
                 <div className="btn-page">策划中...
                   <img className="btn-icon" src={right}/>
                 </div>
