@@ -8,6 +8,7 @@ import ButtonArticle from './button_arti';
 import CountUp from 'react-countup';
 import FooterBlock from './footer_block';
 import data from '../data/btn';
+
 import right from '../images/right.png';
 
 class ButtonPage extends React.Component {

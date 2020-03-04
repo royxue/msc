@@ -20,6 +20,7 @@ import './index.css'
 
 import banner from '../images/banner.png';
 import share from '../images/share.png';
+<<<<<<< HEAD
 import axios from 'axios';
 
 const token_config={
@@ -30,6 +31,8 @@ const token_config={
   "getAccessToken":"https://api.weixin.qq.com/cgi-bin/token"
 };
 const fetchUrl = token_config.getAccessToken+'?grant_type=client_credential&appid='+token_config.appid+'&secret='+token_config.appsecret;
+=======
+>>>>>>> 376ee95c2d7fddf15684403b0eba0b349acf8fbd
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -90,7 +93,11 @@ class IndexPage extends React.Component {
             'mask_image_visible':this.state.mask
           })}>
           <img
+<<<<<<< HEAD
               src={share} style={{height:'75%', width:'100%'}}
+=======
+              src={share} style={{height:'75%', width:'75%'}}
+>>>>>>> 376ee95c2d7fddf15684403b0eba0b349acf8fbd
           /></div></div>
           <img id='banner' src={banner}
             style={{position: 'flex', width:'100%', margin: '0 0 -0.5rem 0'}}
