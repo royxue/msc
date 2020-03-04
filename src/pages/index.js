@@ -20,17 +20,6 @@ import './index.css'
 
 import banner from '../images/banner.png';
 import share from '../images/share.png';
-import axios from 'axios';
-import wx from 'weixin-js-sdk'
-
-const token_config={
-  "token":"",
-  "appid":"wx0a85b83326fb21bf",
-  "appsecret": "a1d2d4fb2f4dbb6f2fe4f33e16e02b35",
-  "getJsapiTicket":"https://api.weixin.qq.com/cgi-bin/ticket/getticket",
-  "getAccessToken":"https://api.weixin.qq.com/cgi-bin/token"
-};
-const fetchUrl = token_config.getAccessToken+'?grant_type=client_credential&appid='+token_config.appid+'&secret='+token_config.appsecret;
 
 
 class IndexPage extends React.Component {
@@ -43,33 +32,6 @@ class IndexPage extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this)
   }
-  componentWillMount(){
-  }
-  async wxInit() {
-    const data = await axios.get(fetchUrl);
-    const resp_data = data.data;
-    wx.config({
-      debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-      appId: resp_data.appid, // 必填，公众号的唯一标识
-      timestamp: resp_data.timestamp, // 必填，生成签名的时间戳
-      nonceStr: resp_data.nonceStr, // 必填，生成签名的随机串
-      signature: resp_data.signature,// 必填，签名，见附录1
-      jsApiList: [
-        'onMenuShareAppMessage',
-        'onMenuShareTimeline'
-      ]
-    })
-    wx.ready(function(){
-      var shareData = {
-      title: '可持续商业指南',
-      desc: '从0到100, 复苏新时期下的未来企业家',
-      link: 'http://covid.zizaimedia.com/',
-      imgUrl: 'https://mscworld-1253849667.cos.ap-shanghai.myqcloud.com/images/logo.png'
-      };
-      wx.onMenuShareAppMessage(shareData);
-      wx.onMenuShareTimeline(shareData);
-    });
-  }
   componentDidMount() {
     const fixedTop = document.getElementById('banner').height;
     window.onscroll = () => {
@@ -81,7 +43,13 @@ class IndexPage extends React.Component {
       }
     }
 
-    this.wxInit();
+    if (window !== undefined) {
+      let href = window.location.href;
+      if(href.indexOf('groupmessage') > -1 || href.indexOf('singlemessage') > -1 || href.indexOf('timeline') > -1){
+        href = href.replace(/\?from=(groupmessage|singlemessage|timeline)(\S*)#/, '#');
+        window.location.href = href;
+      }
+    }
   }
 
   handleClick(){
