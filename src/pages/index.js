@@ -20,8 +20,8 @@ import './index.css'
 
 import banner from '../images/banner.png';
 import share from '../images/share.png';
-<<<<<<< HEAD
 import axios from 'axios';
+import wx from 'weixin-js-sdk'
 
 const token_config={
   "token":"",
@@ -31,8 +31,7 @@ const token_config={
   "getAccessToken":"https://api.weixin.qq.com/cgi-bin/token"
 };
 const fetchUrl = token_config.getAccessToken+'?grant_type=client_credential&appid='+token_config.appid+'&secret='+token_config.appsecret;
-=======
->>>>>>> 376ee95c2d7fddf15684403b0eba0b349acf8fbd
+
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -45,10 +44,31 @@ class IndexPage extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
   componentWillMount(){
-    axios.get(fetchUrl)
-      .then(res => {
-        console.log(res)
-      })  
+  }
+  async wxInit() {
+    const data = await axios.get(fetchUrl);
+    const resp_data = data.data;
+    wx.config({
+      debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+      appId: resp_data.appid, // 必填，公众号的唯一标识
+      timestamp: resp_data.timestamp, // 必填，生成签名的时间戳
+      nonceStr: resp_data.nonceStr, // 必填，生成签名的随机串
+      signature: resp_data.signature,// 必填，签名，见附录1
+      jsApiList: [
+        'onMenuShareAppMessage',
+        'onMenuShareTimeline'
+      ]
+    })
+    wx.ready(function(){
+      var shareData = {
+      title: '可持续商业指南',
+      desc: '从0到100, 复苏新时期下的未来企业家',
+      link: 'http://covid.zizaimedia.com/',
+      imgUrl: 'https://mscworld-1253849667.cos.ap-shanghai.myqcloud.com/images/logo.png'
+      };
+      wx.onMenuShareAppMessage(shareData);
+      wx.onMenuShareTimeline(shareData);
+    });
   }
   componentDidMount() {
     const fixedTop = document.getElementById('banner').height;
@@ -60,6 +80,8 @@ class IndexPage extends React.Component {
         this.setState({ isFixed: false })
       }
     }
+
+    this.wxInit();
   }
 
   handleClick(){
@@ -92,12 +114,7 @@ class IndexPage extends React.Component {
             'mask_image_hidden':!this.state.mask,
             'mask_image_visible':this.state.mask
           })}>
-          <img
-<<<<<<< HEAD
-              src={share} style={{height:'75%', width:'100%'}}
-=======
-              src={share} style={{height:'75%', width:'75%'}}
->>>>>>> 376ee95c2d7fddf15684403b0eba0b349acf8fbd
+          <img src={share} style={{height:'75%', width:'100%'}}
           /></div></div>
           <img id='banner' src={banner}
             style={{position: 'flex', width:'100%', margin: '0 0 -0.5rem 0'}}
