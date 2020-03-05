@@ -20,6 +20,10 @@ import './index.css'
 
 import banner from '../images/banner.png';
 import share from '../images/share.png';
+<<<<<<< HEAD
+=======
+
+>>>>>>> d4f930806f3380301f26de28ecfae1fe3e7b0bd9
 
 class IndexPage extends React.Component {
   constructor(props){
@@ -30,12 +34,6 @@ class IndexPage extends React.Component {
       isFixed: false
     }
     this.handleClick = this.handleClick.bind(this)
-  }
-  componentWillMount(){
-    axios.get(fetchUrl)
-      .then(res => {
-        console.log(res)
-      })  
   }
   componentDidMount() {
     const fixedTop = document.getElementById('banner').height;
@@ -79,8 +77,12 @@ class IndexPage extends React.Component {
             'mask_image_hidden':!this.state.mask,
             'mask_image_visible':this.state.mask
           })}>
+<<<<<<< HEAD
           <img
               src={share} style={{height:'75%', width:'100%'}}
+=======
+          <img src={share} style={{height:'75%', width:'100%'}}
+>>>>>>> d4f930806f3380301f26de28ecfae1fe3e7b0bd9
           /></div></div>
           <img id='banner' src={banner}
             style={{position: 'flex', width:'100%', margin: '0 0 -0.5rem 0'}}
